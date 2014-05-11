@@ -1,0 +1,183 @@
+
+
+/* ==========================================================================
+   fancystudio's custom styles
+   ========================================================================== */
+
+
+@font-face {
+    font-family: 'sansita_oneregular';
+    src: url('../fonts/sansitaone-webfont.eot');
+    src: url('../fonts/sansitaone-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sansitaone-webfont.woff') format('woff'),
+         url('../fonts/sansitaone-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	font-size: 12px;
+}
+
+a {
+   outline: 0 !important;
+}
+
+#section0, #section1{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+#section0{
+	background-image: url(../img/home-bg.jpg);
+}
+
+#section1{
+	background-image: url(../img/onas-bg.jpg);
+}
+
+
+/* ==========================================================================
+   fancystudio's navigácia
+   ========================================================================== */
+
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.nav{
+	font-family: sansita_oneregular;
+	color: #434444;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .active, li.active {
+	color: #df3759 !important;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: #df3759;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #434444;
+	font-size: 17px;
+}
+
+.hlavna-navigacia{
+	background: url(../img/menu/menu-bg.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	float: none !important;
+	margin: 0 auto;
+	max-width: 930px;
+	text-align: center;
+	position: relative;
+	box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-webkit-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-moz-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-ms-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-o-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	margin-top: 5%;
+}
+
+.navbar-nav>li>a {
+	padding: 15px 18px 15px 18px;
+}
+
+.navbar-nav>li {
+	display: inline-block;
+	float: none;
+}
+
+
+.top-strip, .bottom-strip, .left-strip, .right-strip {
+	position: absolute
+}
+
+.top-strip{
+	background: url(../img/menu/tb-strip.png) repeat-x;
+	display: block;
+	height: 2px;
+	top: 6px;
+	left: 10px;
+	right: 10px;
+}
+
+.bottom-strip{
+	background: url(../img/menu/tb-strip.png) repeat-x;
+	display: block;
+	height: 2px;
+	bottom: 6px;
+	left: 10px;
+	right: 10px;
+}
+
+.left-strip{
+	background: url(../img/menu/lr-strip.png) repeat-y;
+	display: block;
+	width: 2px;
+	top: 6px;
+	bottom: 6px;
+	left: 10px;
+}
+
+.right-strip{
+	background: url(../img/menu/lr-strip.png) repeat-y;
+	display: block;
+	width: 2px;
+	top: 6px;
+	bottom: 6px;
+	right: 10px;
+}
+
+.left-ribbon{
+	display: block;
+	width: 100px;
+	height: 63px;
+	background: url(../img/menu/left-ribbon.png) no-repeat;
+	position: absolute;
+	left: -53px;
+	bottom: -23px;
+	z-index: -1;
+}
+
+.right-ribbon{
+	display: block;
+	width: 100px;
+	height: 63px;
+	background: url(../img/menu/right-ribbon.png) no-repeat;
+	position: absolute;
+	right: -53px;
+	bottom: -23px;
+	z-index: -1;
+}
+
+/* ==========================================================================
+   fancystudio's content
+   ========================================================================== */
+
+.content{
+	/*padding-top: 9%;*/
+	color: white;
+	font-size: 14px;
+	text-align: center
+}
+
+.content h1 img{
+	padding-bottom: 35px;
+}
+
+
+
+
+
+
