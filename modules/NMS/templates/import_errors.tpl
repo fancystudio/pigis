@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <td>{$errorcountmsg}:</td>
+    <td>{$errorcount}</td>
+  </tr>
+  <tr>
+    <td>{$linesmsg}:</td>
+    <td>{$lines}</td>
+  </tr>
+  <tr>
+    <td>{$usersaddedmsg}:</td>
+    <td>{$usersadded}</td>
+  </tr>
+  <tr>
+    <td>{$membershipsmsg}:</td>
+    <td>{$memberships}</td>
+  </tr>
+{foreach from=$errors item=err}
+  <tr>
+    <td>&nbsp;</td>
+    <td>{$err}</td>
+  </tr>
+{/foreach}
+</table>

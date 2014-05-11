@@ -1,0 +1,30 @@
+<table>
+  <tr>
+   <td>{$messageidtext}</td>
+   <td>{$messageinfo->messageid}</td>
+  </tr>
+  <tr>
+   <td>{$subjecttext}</td>
+   <td>{$messageinfo->subject}</td>
+  </tr>
+  <tr>
+   <td>{$enteredtext}</td>
+   <td>{$messageinfo->entered|cms_date_format}</td>
+  </tr>
+  <tr>
+   <td>{$modifiedtext}</td>
+   <td>{$messageinfo->modified|cms_date_format}</td>
+  </tr>
+  <tr>
+   <td>{$templatetext}</td>
+   <td>{$messageinfo->template}</td>
+  </tr>
+  <tr>
+   <td>{$messagetext}</td>
+   <td>{$messageinfo->message}</td>
+  </tr>
+  <tr>
+   <td>{$htmlmessagetext}</td>
+   <td>{nms_getmessage msg=$messageinfo->messageid}</td>
+  </tr>
+</table>
