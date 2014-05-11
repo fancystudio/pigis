@@ -19,11 +19,16 @@ body{
 	font-size: 12px;
 }
 
+h3, .h3 {
+font-size: 17px;
+font-weight: 400;
+}
+
 a {
    outline: 0 !important;
 }
 
-#section0, #section1{
+#section0, #section1, #section2, #section3, #section4, #section5{
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -37,6 +42,10 @@ a {
 
 #section1{
 	background-image: url(../img/onas-bg.jpg);
+}
+
+#section2{
+	background-image: url(../img/jedalny-bg.jpg);
 }
 
 
