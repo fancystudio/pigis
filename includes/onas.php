@@ -1,6 +1,5 @@
 <div class="container content onas">
 
-
 <div class="col-md-10 col-md-offset-1">
 <h1><img src="img/titles/o-nas.png" alt="o nás"></h1>
 <p>Reštauráciu Pigis sme v podobe, v ktorej ju poznáte dnes, otvorili 1.7.2013 Nový dizajn, nový Chef a hlavne veľa novej energie vytvorilo miesto, kde jedlo nie je len o nasýtení žalúdka, ale aj o životnom štýle a trendoch ktoré gastronómia prináša. </p>
@@ -13,9 +12,8 @@ Naša kuchyňa je výnimočná hlavne zameraním sa na sezónnosť, poctivosť a
 </p><p>Mnohí z Vás sa pýtajú, prečo nevaríme v čase 14,00-16,00. Je to preto, lebo aj náš Chef a jeho tím si potrebujú oddýchnuť a pripraviť reštauráciu na večerný chod. Kuchyňa je zatvorená aj počas víkendov, kedy si u nás môžete vychutnať krémové cappuccino či domáci cheesecake a zabaviť sa na tradičnom pub quize.
 </p>
 </div>
-<div class="col-md-offset-2 col-md-2"><img src="img/onas/chlieb.png" alt="domáci chlieb"/><h3>Domáci chlieb</h3></div>
-<div class="col-md-offset-1 col-md-2"><img src="img/onas/lokal-farmari.png" alt="suroviny od lokálnych farmárov"/><h3>Suroviny od lokálnych farmárov</h3></div>
-<div class="col-md-offset-1 col-md-2"><img src="img/onas/cerstva-zelenina.png" alt="100% čerstvá zelenina"/><h3>100% čerstvá zelenina</h3></div>
-
+<div class="col-md-offset-2 col-md-2 ikona"><img src="img/onas/chlieb.png" alt="domáci chlieb"/><h3>Domáci chlieb</h3></div>
+<div class="col-md-offset-1 col-md-2 ikona"><img src="img/onas/lokal-farmari.png" alt="suroviny od lokálnych farmárov"/><h3>Suroviny od lokálnych farmárov</h3></div>
+<div class="col-md-offset-1 col-md-2 ikona"><img src="img/onas/cerstva-zelenina.png" alt="100% čerstvá zelenina"/><h3>100% čerstvá zelenina</h3></div>
 
 </div><!--container-->
