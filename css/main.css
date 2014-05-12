@@ -253,5 +253,24 @@ a {
 	padding: 6%;
 }
 
+/* ==========================================================================
+   fancystudio's galeria
+   ========================================================================== */
 
+.slidesContainer{
+	text-align: center;
+}
+
+#section3{
+	padding-top: 0px !important
+}
+
+.slide{
+	display: table;
+}
+
+.table-cell{
+	display: table-cell;
+	vertical-align: middle;
+}
 
