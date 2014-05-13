@@ -27,12 +27,13 @@ function smarty_function_blog($params, &$template){
 		    </a>
 		</div>
 		
-		<div class="col-md-7 blog-desc">
+		<div class="col-md-7 blog-desc well">
 		<h2>mate tuto hento novinku</h2>
-		</div><!--blog-desc-->
+		
 		<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
 		<p>tu bude popis truncate na pocet znako</p>
 		<a class="pull-right" href="#">viac -></a>
+		</div><!--blog-desc-->
 	</div>
 
 	<div class="row">
@@ -42,12 +43,13 @@ function smarty_function_blog($params, &$template){
 		    </a>
 		</div>
 		
-		<div class="col-md-7 blog-desc">
+		<div class="col-md-7 blog-desc well">
 		<h2>mate tuto hento novinku</h2>
-		</div><!--blog-desc-->
+		
 		<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
 		<p>tu bude popis truncate na pocet znako</p>
 		<a class="pull-right" href="#">viac -></a>
+		</div><!--blog-desc-->
 	</div>
 
 
@@ -58,12 +60,13 @@ function smarty_function_blog($params, &$template){
 		    </a>
 		</div>
 		
-		<div class="col-md-7 blog-desc">
+		<div class="col-md-7 blog-desc well">
 		<h2>mate tuto hento novinku</h2>
-		</div><!--blog-desc-->
+		
 		<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
 		<p>tu bude popis truncate na pocet znako</p>
 		<a class="pull-right" href="#">viac -></a>
+		</div><!--blog-desc-->
 	</div>
 
 	<div class="pagination">
