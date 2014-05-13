@@ -8,6 +8,11 @@ $(document).ready(function() {
 		keyboardScrolling: true,
 		slidesNavigation: true,	
 	});
+	$('.pagination').bootpag({
+        total: 10
+    }).on("page", function(event, /* page number here */ num){
+         $(".blogContent").html("Insert content"); // some ajax content loading...
+    });
 	$(".newsletterButton").click(function(){
 		if(isValidEmailAddress($(".newsletterEmail").val(),"errorClass")){
 			$.ajax({
