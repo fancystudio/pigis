@@ -15,6 +15,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'dk_crayon_crumbleregular';
+    src: url('crayon_crumble-webfont.eot');
+    src: url('crayon_crumble-webfont.eot?#iefix') format('embedded-opentype'),
+         url('crayon_crumble-webfont.woff') format('woff'),
+         url('crayon_crumble-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html body{
 	height: 100%
 }
@@ -261,8 +272,12 @@ a {
 	text-align: center;
 }
 
-#section3{
-	padding-top: 0px !important
+.galeria{
+	height: 100%
+}
+
+.controlArrow {
+	top: 52%;
 }
 
 .slide{
@@ -272,5 +287,25 @@ a {
 .table-cell{
 	display: table-cell;
 	vertical-align: middle;
+}
+
+.table-cell img {
+	max-width: 100%;
+	height: auto;
+	border: solid white 7px;
+}
+
+#section3 h1 {
+	position: absolute;
+	top: 130px;
+	left: 50%;
+	margin-left: -75px;
+}
+
+.fullPage-slidesNav.bottom {
+bottom: 17px;
+width: 100%;
+text-align: center;
+left: 0px
 }
 
