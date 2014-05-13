@@ -18,57 +18,57 @@
 
 function smarty_function_blog($params, &$template){
 	?>
-	<div class="container blogContent">
-
-	<div class="row">
-		<div class="col-md-3 col-md-offset-1 blog-img">
-		    <a href="#" class="thumbnail">
-		      <img data-src="holder.js/100%x180" alt="...">
-		    </a>
+	<div class="container blog">
+	<div class="blogContent">
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1 blog-img">
+			    <a href="#" class="thumbnail">
+			      <img data-src="holder.js/100%x180" alt="...">
+			    </a>
+			</div>
+			
+			<div class="col-md-7 blog-desc well">
+			<h2>mate tuto hento novinku</h2>
+			
+			<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
+			<p>tu bude popis truncate na pocet znako</p>
+			<a class="pull-right" href="#">viac -></a>
+			</div><!--blog-desc-->
 		</div>
-		
-		<div class="col-md-7 blog-desc well">
-		<h2>mate tuto hento novinku</h2>
-		
-		<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
-		<p>tu bude popis truncate na pocet znako</p>
-		<a class="pull-right" href="#">viac -></a>
-		</div><!--blog-desc-->
-	</div>
-
-	<div class="row">
-		<div class="col-md-3 col-md-offset-1 blog-img">
-		    <a href="#" class="thumbnail">
-		      <img data-src="holder.js/100%x180" alt="...">
-		    </a>
+	
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1 blog-img">
+			    <a href="#" class="thumbnail">
+			      <img data-src="holder.js/100%x180" alt="...">
+			    </a>
+			</div>
+			
+			<div class="col-md-7 blog-desc well">
+			<h2>mate tuto hento novinku</h2>
+			
+			<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
+			<p>tu bude popis truncate na pocet znako</p>
+			<a class="pull-right" href="#">viac -></a>
+			</div><!--blog-desc-->
 		</div>
-		
-		<div class="col-md-7 blog-desc well">
-		<h2>mate tuto hento novinku</h2>
-		
-		<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
-		<p>tu bude popis truncate na pocet znako</p>
-		<a class="pull-right" href="#">viac -></a>
-		</div><!--blog-desc-->
-	</div>
-
-
-	<div class="row">
-		<div class="col-md-3 col-md-offset-1 blog-img">
-		    <a href="#" class="thumbnail">
-		      <img data-src="holder.js/100%x180" alt="...">
-		    </a>
+	
+	
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1 blog-img">
+			    <a href="#" class="thumbnail">
+			      <img data-src="holder.js/100%x180" alt="...">
+			    </a>
+			</div>
+			
+			<div class="col-md-7 blog-desc well">
+			<h2>mate tuto hento novinku</h2>
+			
+			<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
+			<p>tu bude popis truncate na pocet znako</p>
+			<a class="pull-right" href="#">viac -></a>
+			</div><!--blog-desc-->
 		</div>
-		
-		<div class="col-md-7 blog-desc well">
-		<h2>mate tuto hento novinku</h2>
-		
-		<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
-		<p>tu bude popis truncate na pocet znako</p>
-		<a class="pull-right" href="#">viac -></a>
-		</div><!--blog-desc-->
 	</div>
-
 	<div class="pagination">
 	</div>
 	
