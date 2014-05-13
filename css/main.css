@@ -17,10 +17,10 @@
 
 @font-face {
     font-family: 'dk_crayon_crumbleregular';
-    src: url('crayon_crumble-webfont.eot');
-    src: url('crayon_crumble-webfont.eot?#iefix') format('embedded-opentype'),
-         url('crayon_crumble-webfont.woff') format('woff'),
-         url('crayon_crumble-webfont.ttf') format('truetype');
+    src: url('../fonts/crayon_crumble-webfont.eot');
+    src: url('../fonts/crayon_crumble-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/crayon_crumble-webfont.woff') format('woff'),
+         url('../fonts/crayon_crumble-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -244,7 +244,8 @@ a {
 	display: block;
 	float: left;
 	margin-top: 4%;
-	padding-bottom: 10%
+	padding-bottom: 10%;
+	font-family: dk_crayon_crumbleregular;
 }
 
 .listok img.img-responsive{
@@ -303,9 +304,9 @@ a {
 }
 
 .fullPage-slidesNav.bottom {
-bottom: 17px;
-width: 100%;
-text-align: center;
-left: 0px
+	bottom: 17px;
+	width: 100%;
+	text-align: center;
+	left: none;
 }
 

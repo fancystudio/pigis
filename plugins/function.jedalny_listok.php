@@ -45,6 +45,8 @@ function smarty_function_jedalny_listok($params, &$template){
 	<div class="col-md-3 col-md-offset-1 listok"><a class="jedalny" href="#"><img  class="img-responsive" src="img/jedalny-listok/jedalny-listok.png" alt="jedálny lístok"/></a></div>
 	<div class="col-md-6 col-md-offset-1">
 	<div class="specialita-dna"><div class="inner-content">
+	<h2>špecialita dňa</h2>
+	<h3>pondelok 6.6.2014</h3>
 	<?php 
 		echo $pondelok;
 		echo $utorok;
