@@ -2,6 +2,8 @@
 # CMS Made Simple Configuration File
 # Documentation: /doc/CMSMS_config_reference.pdf
 #
+//error_reporting( E_ALL );
+//ini_set('display_errors', 1);
 $config['dbms'] = 'mysql';
 $config['db_hostname'] = 'mariadb55.websupport.sk:3310';
 $config['db_username'] = 'pigisDev';

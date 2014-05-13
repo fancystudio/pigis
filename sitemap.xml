@@ -2,13 +2,13 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url>
 <loc>http://localhost/pigis/</loc>
-<lastmod>2014-05-11</lastmod>
+<lastmod>2014-05-12</lastmod>
 <changefreq>always</changefreq>
 <priority>1.0</priority>
 </url>
 <url>
 <loc>http://localhost/pigis/index.php?page=specialita-dna</loc>
-<lastmod>2014-05-11</lastmod>
+<lastmod>2014-05-12</lastmod>
 <changefreq>always</changefreq>
 <priority>0.8</priority>
 </url>
