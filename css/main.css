@@ -105,7 +105,7 @@ a {
 	background-size: cover;
 	float: none !important;
 	margin: 0 auto;
-	max-width: 930px;
+	max-width: 735px;
 	text-align: center;
 	position: relative;
 	box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
@@ -118,7 +118,7 @@ a {
 }
 
 .navbar-nav>li>a {
-	padding: 15px 18px 15px 18px;
+	padding: 15px 20px 15px 20px;
 }
 
 .navbar-nav>li {
@@ -281,6 +281,71 @@ a {
 }
 
 /* ==========================================================================
+   fancystudio's nauč sa chefovať
+   ========================================================================== */
+
+.blog h1{
+	text-align: center;
+	margin-top: 0px
+}
+
+.blog .article{
+	background: url(../img/blog/article-bg.jpg);
+	background-size: cover;
+	min-height: 195px
+}
+
+.blog .article h2{
+	margin-top: 10px;
+	line-height: 1.4;
+}
+
+.blog .article h2 a{
+	color: #4b7d83;
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 24px;
+	margin-top: -5px;
+}
+
+.blog .article h2 span{
+	width: 100%;
+	height: 1px;
+	display: block;
+	background: url(../img/blog/dashed.png) repeat-x;
+}
+
+.blog .article p{
+	color: #707070;
+}
+
+.blog .article-date{
+	color: #cf4362 !important;
+	font-size: 10px;
+}
+
+.blog .article-date img{
+	margin-right: 10px
+}
+
+.blog .btn-xs {
+	background-color: #cf4362;
+	color: white;
+	border: none;
+	padding: 4px 10px;
+	margin-bottom: 15px;
+}
+
+.blog .btn-xs:hover {
+	background-color: #aa3a53;
+}
+
+.thumbnail {
+	border-radius: 0px;
+	/*background-color: #e3dadc*/
+}
+
+/* ==========================================================================
    fancystudio's galeria
    ========================================================================== */
 
@@ -324,4 +389,15 @@ a {
 	text-align: center;
 	left: none;
 }
+
+
+
+
+/*
+	.blog .blog-img{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+	
+*/
 

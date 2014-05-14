@@ -19,56 +19,74 @@
 function smarty_function_blog($params, &$template){
 	?>
 	<div class="container blog">
-	<div class="blogContent">
-		<div class="row">
-			<div class="col-md-3 col-md-offset-1 blog-img">
-			    <a href="#" class="thumbnail">
-			      <img data-src="holder.js/100%x180" alt="...">
-			    </a>
-			</div>
-			
-			<div class="col-md-7 blog-desc well">
-			<h2>mate tuto hento novinku</h2>
-			
-			<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
-			<p>tu bude popis truncate na pocet znako</p>
-			<a class="pull-right" href="#">viac -></a>
-			</div><!--blog-desc-->
-		</div>
-	
-		<div class="row">
-			<div class="col-md-3 col-md-offset-1 blog-img">
-			    <a href="#" class="thumbnail">
-			      <img data-src="holder.js/100%x180" alt="...">
-			    </a>
-			</div>
-			
-			<div class="col-md-7 blog-desc well">
-			<h2>mate tuto hento novinku</h2>
-			
-			<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
-			<p>tu bude popis truncate na pocet znako</p>
-			<a class="pull-right" href="#">viac -></a>
-			</div><!--blog-desc-->
-		</div>
-	
-	
-		<div class="row">
-			<div class="col-md-3 col-md-offset-1 blog-img">
-			    <a href="#" class="thumbnail">
-			      <img data-src="holder.js/100%x180" alt="...">
-			    </a>
-			</div>
-			
-			<div class="col-md-7 blog-desc well">
-			<h2>mate tuto hento novinku</h2>
-			
-			<p class="article-date"><span>tu bude ikona hodin</span> tu datum a cas</p>
-			<p>tu bude popis truncate na pocet znako</p>
-			<a class="pull-right" href="#">viac -></a>
-			</div><!--blog-desc-->
-		</div>
+	<div class="col-md-12">
+	<h1><img src="img/titles/nauc-sa-chefovat.png" alt="nauč sa chefovať"></h1>
 	</div>
+	
+	<div class="blogContent container">
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1 blog-img">
+			    <a href="#" class="thumbnail">
+			      <img src="img/blog/article-img.jpg" alt="tu nadpis">
+			    </a>
+			</div>
+			
+			<div class="col-md-7 blog-desc article">
+			<h2><a href="#">Mate tuto hento novinku</a><span></span></h2>
+			
+			<p class="article-date"><img src="img/blog/time-icon.png" width="15" height="15"> 23.5.2014 / 13:00</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur...
+			</p>
+			<button type="button" class="btn btn-default btn-xs pull-right">
+  <span class="glyphicon glyphicon-align-justify"></span> viac
+</button>
+			</div><!--blog-desc-->
+		</div>
+	
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1 blog-img">
+			    <a href="#" class="thumbnail">
+			      <img src="img/blog/article-img.jpg" alt="tu nadpis">
+			    </a>
+			</div>
+			
+			<div class="col-md-7 blog-desc article">
+			<h2><a href="#">Mate tuto hento novinku</a><span></span></h2>
+			
+			<p class="article-date"><img src="img/blog/time-icon.png" width="15" height="15"> 23.5.2014 / 13:00</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur...
+			</p>
+			<button type="button" class="btn btn-default btn-xs pull-right">
+  <span class="glyphicon glyphicon-align-justify"></span> viac
+</button>
+			</div><!--blog-desc-->
+		</div>
+	
+	
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1 blog-img">
+			    <a href="#" class="thumbnail">
+			      <img src="img/blog/article-img.jpg" alt="tu nadpis">
+			    </a>
+			</div>
+			
+			<div class="col-md-7 blog-desc article">
+			<h2><a href="#">Mate tuto hento novinku</a><span></span></h2>
+			
+			<p class="article-date"><img src="img/blog/time-icon.png" width="15" height="15"> 23.5.2014 / 13:00</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur...
+			</p>
+			<button type="button" class="btn btn-default btn-xs pull-right">
+  <span class="glyphicon glyphicon-align-justify"></span> viac
+</button>
+			</div><!--blog-desc-->
+		</div>
+		
+		
+			</div>
 	<div class="pagination">
 	</div>
 	

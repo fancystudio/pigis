@@ -36,13 +36,44 @@ function smarty_function_jedalny_listok($params, &$template){
 		if($weekDay["prop_name"] == "nedela"){ $nedela = $weekDay["content"]; }
 	}
 	?>
+
+
+
+<!-- Modal -->
+<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      
+      
+      
+            <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+	
+	
 	<div class="container content jedalny-listok">
 	<div class="col-md-12">
-	<h1><img src="img/titles/jedalny-listok.png" alt="jedálny lístok"></h1>
+	<h1><img src="img/titles/menu.png" alt="jedálny lístok"></h1>
 	</div>
 	
 	<div class="jedalny-items">
-	<div class="col-md-3 col-md-offset-1 listok"><a class="jedalny" href="#"><img  class="img-responsive" src="img/jedalny-listok/jedalny-listok.png" alt="jedálny lístok"/></a></div>
+	<div class="col-md-3 col-md-offset-1 listok">
+	
+	<a href="includes/jedalny-listok.php" class="jedalny" data-toggle="modal" data-target="#myModal">
+	<img  class="img-responsive" src="img/jedalny-listok/jedalny-listok.png" alt="jedálny lístok"/></a>
+	
+	
+	
+	
+	</div>
 	<div class="col-md-6 col-md-offset-1">
 	<div class="specialita-dna"><div class="inner-content">
 	<h2>špecialita dňa</h2>

@@ -7,6 +7,7 @@ $(document).ready(function() {
 		paddingTop: '7%',
 		keyboardScrolling: true,
 		slidesNavigation: true,	
+		resize: false,
 	});
 	$('.pagination').bootpag({
         total: 10
