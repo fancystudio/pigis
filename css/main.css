@@ -57,6 +57,7 @@ a {
 
 #section1{
 	background-image: url(../img/onas-bg.jpg);
+	height: auto !important
 }
 
 #section2{

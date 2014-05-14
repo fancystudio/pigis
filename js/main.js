@@ -2,12 +2,13 @@ $(document).ready(function() {
 	$('#fullpage').fullpage({
 		verticalCentered: false,
 		anchors: ['domov', 'onas', 'jedalny-listok', 'galeria', 'nauc-sa-chefovat', 'kontakt'],
-		'scrollOverflow': true,
+		'scrollOverflow': false,
 		menu: '#menu',
 		paddingTop: '7%',
 		keyboardScrolling: true,
 		slidesNavigation: true,	
 		resize: false,
+		autoScrolling: false
 	});
 	$('.pagination').bootpag({
         total: 10
