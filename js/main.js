@@ -243,9 +243,9 @@ navigationControl: false,
 
 };
 
-var div = document.getElementById('section5');
+var div = document.getElementById('gmap');
 var map = new google.maps.Map(div, options);
-var myLatlng = new google.maps.LatLng(48.73289, 19.14155);
+var myLatlng = new google.maps.LatLng(48.73389, 19.14155);
 var image = 'img/marker.png';
 var marker = new google.maps.Marker({
       position: myLatlng,
