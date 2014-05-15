@@ -68,6 +68,11 @@ a {
 	background-image: url(../img/nauc-sa-bg.jpg);
 }
 
+#section4 {
+	height: auto !important
+}
+
+
 
 /* ==========================================================================
    fancystudio's navigácia
@@ -206,12 +211,12 @@ a {
 }
 
 .onas{
-	padding-bottom: 9%;
+/*	padding-bottom: 9%;  */
 }
 
-.onas .ikona{
-	padding-bottom: 50px;
-	padding-top: 50px;
+.onas .ikona {
+	padding-bottom: 100px;
+	padding-top: 100px;
 }
 
 .jedalny img{
