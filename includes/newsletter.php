@@ -1,11 +1,12 @@
-
-      <div class="modal-header">
+      <!--<div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">Jedálny lístok</h4>
-      </div>
-      <div class="modal-body"> 
-       <iframe src="./uploads/jedalny-listok.pdf" height="100%" width="100%" seamless="seamless"></iframe>
-      </div>
+      </div>-->
+      <div class="modal-body">
+       
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	  <?php  include('../includes/newsletter-form.php') ?>     
+	  </div>
       <!--<div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Zavrieť</button>
       </div>-->

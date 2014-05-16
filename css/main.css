@@ -30,16 +30,19 @@
 
 html body{
 	height: 100%;
+	max-width: 100%;
+	overflow-x: hidden !important
 }
 
 body{
 	font-size: 14px;
 	font-family: 'PT Sans Narrow', sans-serif;
+	
 }
 
 h3, .h3 {
-font-size: 17px;
-font-weight: 400;
+	font-size: 17px;
+	font-weight: 400;
 }
 
 a {
@@ -65,6 +68,10 @@ a {
 
 #section2{
 	background-image: url(../img/jedalny-bg.jpg);
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-perspective: 0;
+	height: auto !important
+	
 }
 
 #section3 {
@@ -218,8 +225,9 @@ a {
 }
 
 .onas h3{
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 28px;
+	text-transform: uppercase
 }
 
 .onas .ikona {
@@ -294,6 +302,55 @@ a {
 	padding-bottom: 15px;
 }
 
+#section2 .modal-body{
+	height: 80%
+}
+
+div#modlanews{
+	top:50%;
+	margin-top: -120px
+}
+
+#modlanews .modal-content{
+	border-radius: 0px;
+	background: url(../img/blog/article-bg.jpg);
+	background-size: cover;
+	position: relative;
+}
+
+a.specialita-dna-news{
+	color: #df3759;
+	font-size: 24px
+}
+
+.specialita-dna-news {
+position: absolute;
+bottom: 0px;
+left: 0px;
+right: 0px;
+bottom: 34px;
+}
+
+.mail-icon {
+	margin-bottom: 20px;
+}
+
+#myModal .modal-lg{
+	height: 92%;
+}
+
+#myModal .modal-lg .modal-content{
+	height: 100%;
+}
+
+#myModal .modal-lg .modal-content{
+	height: 100%;
+}
+
+#myModal .modal-lg .modal-content .modal-body{
+	height: 90%;
+}
+
 /* ==========================================================================
    fancystudio's nauč sa chefovať
    ========================================================================== */
@@ -362,6 +419,17 @@ a {
 .thumbnail {
 	border-radius: 0px;
 	/*background-color: #e3dadc*/
+}
+
+.blog li a {
+	margin: 2px;
+	color: #434444;
+	background: url(../img/blog/article-bg.jpg);
+	background-size: cover;
+}
+
+.blog li.disabled a{
+	color: #df3759
 }
 
 /* ==========================================================================
@@ -503,6 +571,7 @@ div.pagination{
 	border: solid #434444 2px;
 	padding: 22px;
 	color: #434444;
+	text-align: center;
 }
 
 .newsletterButton {
@@ -534,20 +603,20 @@ div.pagination{
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-color: #434444;
-background-color: transparent;
-border-color: #434444;
+	color: #434444;
+	background-color: transparent;
+	border-color: #434444;
 }
 
 .form-control:focus {
-border-color: #434444;
-outline: 0;
--webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(230,115,128,.6);
-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(230,115,128,.6);
+	border-color: #434444;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(230,115,128,.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(230,115,128,.6);
 }
 
 .kontakt-inner{
-	padding: 20px
+	padding: 20px 35px;
 }
 
 .hodiny{
@@ -558,15 +627,109 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(230,115,128,.6);
 	width: 100%;
 	border-top: 1px solid #434444;
 	padding-top: 30px;
-	margin-top: 15px;
+	margin-top: 22px;
 	display: block;
 }
 
 .pigis-logo-small {
-padding-bottom: 10px;
-margin-top: -10px;
+	padding-bottom: 10px;
+	margin-top: -10px;
 }
 
 .news-p {
 	padding-top: 10px;
+}
+
+.copyright {
+	border-top: dashed 1px black;
+	padding: 25px 0px 0px 0px;
+	color: #434444;
+	text-align: center;
+}
+
+.kontakt a{
+	color: #df3759;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   responsibilita
+   ========================================================================== */
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+.left-ribbon, .right-ribbon, #gmap, .controlArrow{
+	display: none;
+}
+
+.navbar-nav>li {
+	display: block;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border: none;
+	border-color: transparent
+}
+
+.kontakt-wrapper {
+	 padding-bottom: 0px; 
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	padding-bottom: 15px
+}
+
+.onas .ikona {
+	padding-bottom: 20px;
+	padding-top: 40px;
+}
+
+.listok img.img-responsive {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.copyright {
+	margin-top: 25px;
+}
+
+.specialita-dna .inner-content {
+	position: static;
+	padding-bottom: 120px;
+}
+
+.specialita-dna img.img-responsive {
+	display: none
+}
+
+.blog .btn-xs {
+	float: none !important;
+}
+
 }

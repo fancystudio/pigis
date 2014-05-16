@@ -87,7 +87,9 @@ function smarty_function_blog($params, &$template){
 		
 		
 			</div>
-	<div class="pagination">
+			
+	<div class="pagination col-md-10 col-md-offset-1">
+	
 	</div>
 	
 	</div><!--blog-->

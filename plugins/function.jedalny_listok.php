@@ -38,28 +38,8 @@ function smarty_function_jedalny_listok($params, &$template){
 	?>
 
 
-
-<!-- Modal -->
-<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      
-      
-      
-            <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-	
-	
 	<div class="container content jedalny-listok">
+	
 	<div class="col-md-12">
 	<h1><img src="img/titles/menu.png" alt="jedálny lístok"></h1>
 	</div>
@@ -67,7 +47,8 @@ function smarty_function_jedalny_listok($params, &$template){
 	<div class="jedalny-items">
 	<div class="col-md-3 col-md-offset-1 listok">
 	
-	<a href="includes/jedalny-listok.php" class="jedalny" data-toggle="modal" data-target="#myModal">
+	<!--<a href="includes/jedalny-listok.php" class="jedalny" data-toggle="modal" data-target="#myModal">-->
+	<a href="./uploads/jedalny-listok.pdf" class="jedalny">
 	<img  class="img-responsive" src="img/jedalny-listok/jedalny-listok.png" alt="jedálny lístok"/></a>
 	
 	
@@ -87,6 +68,8 @@ function smarty_function_jedalny_listok($params, &$template){
 		echo $sobota;
 		echo $nedela;
 	?>
+	<a href="includes/newsletter.php" class="specialita-dna-news" data-toggle="modal" data-target="#modlanews">
+	<img class="mail-icon" src="img/mail-icon.png"/><br>Dostávaj špecialitu dňa na tvoj e-mail!</a>
 	</div><!--inner conent-->
 	<img  class="img-responsive" src="img/jedalny-listok/chalkboard.png" alt="špecialita dňa"/></div><!--specialita-dna-->
 	</div>
