@@ -10,11 +10,34 @@ $(document).ready(function() {
 		resize: false,
 		autoScrolling: false
 	});
-	$('.pagination').bootpag({
-        total: 10
-    }).on("page", function(event, /* page number here */ num){
-         $(".blogContent").html("Insert content"); // some ajax content loading...
-    });
+	$( ".blogContent" ).load( "lib/getBlogContentAjax.php", 
+		{ 
+			currentPage : 1
+		}, function( response, status, xhr ) {
+			if(status == "success"){
+				$('.pagination').bootpag({
+			        total: $(".currentPage").html()
+			    }).on("page", function(event, num){
+			    	$( ".blogContent" ).load( "lib/getBlogContentAjax.php", 
+		    			{ 
+			    		currentPage : num
+		    			}, function( response, status, xhr ) {
+		    				if(status == "success"){
+		    					console.log("Prepnutie stranky");
+		    				}else{
+		    					alert("Nepodarilo sa nacitat blog");
+		    				}
+		    			} 
+		    		);
+			    });
+			}else{
+				alert("Nepodarilo sa nacitat blog");
+			}
+		} 
+	);
+	$(".showBlogModal").click(function(){
+        window.location.hash = $(this).attr("id");
+	});
 	$(".newsletterButton").click(function(){
 		if(isValidEmailAddress($(".newsletterEmail").val(),"errorClass")){
 			$.ajax({

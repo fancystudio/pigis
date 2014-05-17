@@ -1,0 +1,4 @@
+<?php
+$info['js'] = array('jquery-1.8.3.min.js');
+$info['cdn'] = '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js';
+?>

@@ -1,0 +1,6 @@
+<?php
+$info['css'] = 'css/smoothness/jquery-ui-1.9.2.custom.min.css';
+$info['js'] = 'js/jquery-ui-1.9.2.custom.min.js';
+$info['depends'] = 'jquery';
+$info['cdn'] = '//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js';
+?>
