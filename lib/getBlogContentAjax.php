@@ -22,14 +22,8 @@ for($i = 0; $i < count($pageItems); $i++){
 	$content .= '</div><!--blog-desc-->';
 	$content .= '</div>';
 }
-for($i = 0; $i < count($pageItems); $i++){
-	$content .= '<div class="modal fade blogModal" id="blogContent'.$pageItems[$i]["id"].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
-	$content .= $pageItems[$i]["content"];
-	$content .= '</div>';
-}
 $content .= '<script type="text/javascript">';
-$content .= '$(".blogModal").on("show.bs.modal", function () { window.location.hash = $(this).attr("id"); });';
-$content .= '$(".showBlogDetail").click(function(){ $($(this).parents(".row").find("button").attr("data-target")).modal("show")});';
+$content .= '$(".showBlogDetail").click(function(){ loadBlogDetailAndShow($(this).parents(".row").find("button").attr("data-target"), "thumbClick");});';
 $content .= '</script>';
 $response_array['status'] = (($pageItems != null) ? "success" : "error");
 $response_array['content'] = $content;

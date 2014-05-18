@@ -11,6 +11,15 @@ $(document).ready(function() {
 		autoScrolling: false
 	});
 	
+	if(window.location.hash != "#domov"
+		&& window.location.hash != "#onas"
+		&& window.location.hash != "#jedalny-listok"
+		&& window.location.hash != "#galeria"
+		&& window.location.hash != "#nauc-sa-chefovat"
+		&& window.location.hash != "#kontakt"){
+			loadBlogDetailAndShow(window.location.hash, "pageInit");
+	}
+	
 	$.ajax({
 		type: "POST",
 		url: "lib/getBlogContentAjax.php",
@@ -21,7 +30,7 @@ $(document).ready(function() {
 		beforeSend: function(){},
 		success: function(response){
 			if(response.status == "success"){
-				$(".blogContent").html(response.content);
+				$(".blogContent .blogThumbs").html(response.content);
 				$('.pagination').bootpag({
 			        total: response.currentPage
 			    }).on("page", function(event, num){
@@ -35,10 +44,9 @@ $(document).ready(function() {
 			    		beforeSend: function(){},
 			    		success: function(response){
 			    			if(response.status == "success"){
-		    					$(".blogContent").fadeOut(function(){
-			    					$(".blogContent").html(response.content).fadeIn();
+		    					$(".blogContent .blogThumbs").fadeOut(function(){
+			    					$(".blogContent .blogThumbs").html(response.content).fadeIn();
 			    				});
-			    				
 		    				}else{
 		    					alert("Nepodarilo sa nacitat blog");
 		    				}     
@@ -58,9 +66,38 @@ $(document).ready(function() {
 	});
 	newsletterSend();
 });
+function loadBlogDetailAndShow(hashTag, typeOfRequest){
+	if(hashTag.substr(0, 12) == "#blogContent" && isNumber(hashTag.substr(12))){
+		blogId = hashTag.substr(12);
+		if(typeOfRequest == "pageInit"){
+			$.fn.fullpage.moveTo(5); //slajd na blog sekciu
+		}
+		$.ajax({
+    		type: "POST",
+    		url: "lib/getBlogDetailAjax.php",
+    		data: {
+				blogId : blogId
+    		},
+    		beforeSend: function(){},
+    		success: function(response){
+    			if(response.status == "success"){
+    				$(".blogContent .blogModal").html(response.content);
+					$(hashTag).modal('show');
+				}else{
+					alert("Nepodarilo sa nacitat blog detail");
+				}     
+    		},
+    		error: function(response){
+    			alert("Nepodarilo sa nacitat blog detail");
+    		}
+    	});
+	}
+}
 function newsletterSend() {
 	$(".newsletterButton").click(function(){
-		if(isValidEmailAddress($(".newsletterEmail").val(),"errorClass")){
+		var $infoPanel = $(this).siblings(".sendNewsletterStatus");
+		$infoPanel.html("").removeClass("alert").removeClass("alert-success");
+		if(isValidEmailAddress($(".newsletterEmail").val(),$infoPanel)){
 			$.ajax({
 				type: "POST",
 				url: "lib/setMailToNewsletter.php",
@@ -70,27 +107,35 @@ function newsletterSend() {
 				beforeSend: function(){},
 				success: function(response){
 					if(response.status == "success"){
-						$(".sendNewsletterStatus").html("Váš email bol pridaný do odberu noviniek").addClass("alert").addClass("alert-success");
+						$infoPanel.html("Váš email bol pridaný do odberu noviniek").addClass("alert").addClass("alert-success");
     				}else{
-    					$(".sendNewsletterStatus").html("Váš email sa nepodarilo pridať do odberu noviniek").addClass("alert").addClass("alert-danger");
+    					$infoPanel.html("Váš email sa nepodarilo pridať do odberu noviniek").addClass("alert").addClass("alert-danger");
     				} 
 				},
 				error: function(response){
-					$(".sendNewsletterStatus").html("Váš email sa nepodarilo pridať do odberu noviniek").addClass("alert").addClass("alert-danger");
+					$infoPanel.html("Váš email sa nepodarilo pridať do odberu noviniek").addClass("alert").addClass("alert-danger");
 				}
 			});
 		}
 	});
 }
-function isValidEmailAddress(emailAddress,errorClass) {
+function isValidEmailAddress(emailAddress, infoPanel) {
     var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
     if(pattern.test(emailAddress)){
-    	//$(errorClass).hide();
     	return true;
     }else{
-    	//$(errorClass).show();
+    	infoPanel.html("Email nebol zadaný, alebo bol zadaný nesprávne").addClass("alert").addClass("alert-danger");
     	return false;
     }
+}
+function isNumber(value) {
+	if ((undefined === value) || (null === value)) {
+        return false;
+    }
+    if (typeof value == 'number') {
+        return true;
+    }
+    return !isNaN(value - 0);
 }
 var map;
 function initialize() {        

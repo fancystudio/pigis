@@ -43,6 +43,22 @@ class Helper
 		}
 		return $pageItems;
 	}
+	public function getBlogDetail($blogId){
+		$pageItems = array();
+		$select = $this->db->prepare("SELECT cgblog_id, cgblog_title, cgblog_date, cgblog_data, status from cms_module_cgblog mb
+										where cgblog_id = ".$blogId);
+		$select->execute();
+		$blogCount = 0;
+		while ($row = $select->fetch(PDO::FETCH_OBJ)){
+			$pageItems[$blogCount]["id"] = $row->cgblog_id;
+			$pageItems[$blogCount]["title"] = $row->cgblog_title;
+			$pageItems[$blogCount]["date"] = date("d.m.Y h:i:s", strtotime($row->cgblog_date));
+			$pageItems[$blogCount]["content"] = $row->cgblog_data;
+			$pageItems[$blogCount]["status"] = $row->status;
+			$blogCount++;
+		}
+		return $pageItems;
+	}
 	public function insertMailToNewsletter($mail){
 		try{
 			$insert = $this->db->prepare("INSERT INTO cms_module_nms_users (uniqueid, email, username, disabled, confirmed, htmlemail, dateadded, dateconfirmed, error_count, bounce_count) VALUES (?,?,?,?,?,?,?,?,?,?)");
