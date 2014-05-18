@@ -32,8 +32,8 @@ class Helper
 			while ($row = $select->fetch(PDO::FETCH_OBJ)){
 				$pageItems[$blogCount]["id"] = $row->cgblog_id;
 				$pageItems[$blogCount]["title"] = $row->cgblog_title;
-				$pageItems[$blogCount]["date"] = $row->cgblog_date;
-				$pageItems[$blogCount]["summary"] = $row->summary;
+				$pageItems[$blogCount]["date"] = date("d.m.Y h:i:s", strtotime($row->cgblog_date));
+				$pageItems[$blogCount]["summary"] = $this->truncate($row->summary, 450);
 				$pageItems[$blogCount]["content"] = $row->cgblog_data;
 				$pageItems[$blogCount]["img"] = "uploads/cgblog/id".$row->cgblog_id."/".$row->value;
 				$blogCount++;
@@ -42,6 +42,13 @@ class Helper
 			echo "nie je null";
 		}
 		return $pageItems;
+	}
+	function truncate($text, $chars = 25) {
+	    $text = $text." ";
+	    $text = substr($text,0,$chars);
+	    $text = substr($text,0,strrpos($text,' '));
+	    $text = $text."...";
+	    return $text;
 	}
 }
 ?>
