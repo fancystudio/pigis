@@ -1,38 +1,36 @@
 <?php
 error_reporting( E_ALL );
 ini_set('display_errors', 1);
-	require_once('HelperClass.php');
-	require_once ('../config.php');
-	$pageItems = array();
-	$help = new Helper($config);
-	$pageItems = $help->getCurrentBlogPage($_POST["currentPage"],null);
-	for($i = 0; $i < count($pageItems); $i++){
-		?>
-		<div class="row">
-			<div class="col-md-3 col-md-offset-1 blog-img">
-			    <a href="javascript:void(0)" class="thumbnail">
-			      <img src="<?php echo $pageItems[$i]["img"]?>" alt="<?php echo $pageItems[$i]["title"]?>">
-			    </a>
-			</div>
-			<div class="col-md-7 blog-desc article">
-				<h2><a href="#"><?php echo $pageItems[$i]["title"]?></a><span></span></h2>
-				<p class="article-date"><img src="img/blog/time-icon.png" width="15" height="15"><?php echo $pageItems[$i]["date"]?></p>
-				<p><?php echo $pageItems[$i]["summary"]?></p>
-				<button type="button" class="btn btn-default btn-xs pull-right showBlogModal" data-toggle="modal" data-target="#blogContent<?php echo $pageItems[$i]["id"]?>">
-	  				<span class="glyphicon glyphicon-align-justify"></span> viac
-				</button>
-			</div><!--blog-desc-->
-		</div>
-		<?php 
-	}
-	for($i = 0; $i < count($pageItems); $i++){
-		?>
-		<div class="modal fade" id="blogContent<?php echo $pageItems[$i]["id"]?>" tabindex="-1" role="dialog" aria-hidden="true">
-	  		<?php echo $pageItems[$i]["content"]?>
-		</div>
-		<?php 
-	}
-	?>
-	<div class="currentPage" style="display:none"><?php echo $help->getBlogPageCount();?></div>
-	<?php
+require_once 'HelperClass.php';
+require_once '../config.php';
+$pageItems = array();
+$help = new Helper($config);
+$pageItems = $help->getCurrentBlogPage($_POST["currentPage"],null);
+$content = "";
+for($i = 0; $i < count($pageItems); $i++){
+	$content .= '<div class="row">';
+	$content .= '<div class="col-md-3 col-md-offset-1 blog-img">';
+	$content .= '<a href="javascript:void(0)" class="thumbnail">';
+	$content .= '<img src="'.$pageItems[$i]["img"].'" alt="'.$pageItems[$i]["title"].'">';
+	$content .= '</a>';
+	$content .= '</div>';
+	$content .= '<div class="col-md-7 blog-desc article">';
+	$content .= '<h2><a href="javascript:void(0)">'.$pageItems[$i]["title"].'</a><span></span></h2>';
+	$content .= '<p class="article-date"><img src="img/blog/time-icon.png" width="15" height="15">'.$pageItems[$i]["date"].'</p>';
+	$content .= '<button type="button" class="btn btn-default btn-xs pull-right" data-toggle="modal" data-target="#blogContent'.$pageItems[$i]["id"].'">';
+	$content .= '<span class="glyphicon glyphicon-align-justify"></span> viac';
+	$content .= '</button>';
+	$content .= '</div><!--blog-desc-->';
+	$content .= '</div>';
+}
+for($i = 0; $i < count($pageItems); $i++){
+	$content .= '<div class="modal fade blogModal" id="blogContent'.$pageItems[$i]["id"].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
+	$content .= $pageItems[$i]["content"];
+	$content .= '</div>';
+}
+$response_array['status'] = (($pageItems != null) ? "success" : "error");
+$response_array['content'] = $content;
+$response_array['currentPage'] = $help->getBlogPageCount();
+header('Content-type: application/json');
+echo json_encode($response_array);
 ?>
