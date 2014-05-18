@@ -43,6 +43,15 @@ class Helper
 		}
 		return $pageItems;
 	}
+	public function insertMailToNewsletter($mail){
+		try{
+			$insert = $this->db->prepare("INSERT INTO cms_module_nms_users (uniqueid, email, username, disabled, confirmed, htmlemail, dateadded, dateconfirmed, error_count, bounce_count) VALUES (?,?,?,?,?,?,?,?,?,?)");
+			$insert->execute(array(md5(uniqid(rand(),1)), $mail,"", 0, 0, 1, date("Y-m-d H:i:s"), null, null, null));
+			return true;		
+		}catch(Exception $e) {
+			return false;
+		}
+	}
 	function truncate($text, $chars = 25) {
 	    $text = $text." ";
 	    $text = substr($text,0,$chars);

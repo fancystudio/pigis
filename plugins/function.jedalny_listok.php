@@ -17,26 +17,36 @@
 #Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 function smarty_function_jedalny_listok($params, &$template){
-	$pondelok = "";
-	$utorok = "";
-	$streda = "";
-	$stvrtok = "";
-	$piatok = "";
-	$sobota = "";
-	$nedela = "";
+	$dayOfWeek = date("w");
+	$dayOfWeekToSelect = "content_en"; //pondelok len v db sa inak vola pole
+	$dayOfWeekSk = "Pondelok";
+	if($dayOfWeek == 2){
+		$dayOfWeekToSelect = "utorok";
+		$dayOfWeekSk = "Utorok";
+	}
+	if($dayOfWeek == 3){
+		$dayOfWeekToSelect = "streda";
+		$dayOfWeekSk = "Streda";
+	}
+	if($dayOfWeek == 4){
+		$dayOfWeekToSelect = "stvrtok";
+		$dayOfWeekSk = "Štvrtok";
+	}
+	if($dayOfWeek == 5){
+		$dayOfWeekToSelect = "piatok";
+		$dayOfWeekSk = "Piatok";
+	}
+	if($dayOfWeek == 6){
+		$dayOfWeekToSelect = "sobota";
+		$dayOfWeekSk = "Sobota";
+	}
+	$weekDayContent = "";
 	$db = cmsms()->GetDb();
-	$weekDaysSelect = $db->GetArray("SELECT prop_name, content FROM cms_content_props where content_id = 57");
+	$weekDaysSelect = $db->GetArray("SELECT prop_name, content FROM cms_content_props where content_id = 57 and prop_name like '".$dayOfWeekToSelect."'");
 	foreach($weekDaysSelect as $weekDay){	
-		if($weekDay["prop_name"] == "content_en"){ $pondelok = $weekDay["content"]; }
-		if($weekDay["prop_name"] == "utorok"){ $utorok = $weekDay["content"]; }
-		if($weekDay["prop_name"] == "streda"){ $streda = $weekDay["content"]; }
-		if($weekDay["prop_name"] == "stvrtok"){ $stvrtok = $weekDay["content"]; }
-		if($weekDay["prop_name"] == "piatok"){ $piatok = $weekDay["content"]; }
-		if($weekDay["prop_name"] == "sobota"){ $sobota = $weekDay["content"]; }
-		if($weekDay["prop_name"] == "nedela"){ $nedela = $weekDay["content"]; }
+		$weekDayContent = $weekDay["content"];
 	}
 	?>
-
 
 	<div class="container content jedalny-listok">
 	
@@ -58,15 +68,9 @@ function smarty_function_jedalny_listok($params, &$template){
 	<div class="col-md-6 col-md-offset-1">
 	<div class="specialita-dna"><div class="inner-content">
 	<h2>špecialita dňa</h2>
-	<h3>pondelok 6.6.2014</h3>
+	<h3><?php echo $dayOfWeekSk." ".(($dayOfWeek == 0) ? Date('d.m.Y', strtotime("+1 days")) : date("d.m.Y"))?></h3>
 	<?php 
-		echo $pondelok;
-		echo $utorok;
-		echo $streda;
-		echo $stvrtok;
-		echo $piatok;
-		echo $sobota;
-		echo $nedela;
+		echo $weekDayContent;
 	?>
 	<a href="includes/newsletter.php" class="specialita-dna-news" data-toggle="modal" data-target="#modlanews">
 	<img class="mail-icon" src="img/mail-icon.png"/><br>Dostávaj špecialitu dňa na tvoj e-mail!</a>
