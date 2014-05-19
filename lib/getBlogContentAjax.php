@@ -3,7 +3,7 @@ require_once 'HelperClass.php';
 require_once '../config.php';
 $pageItems = array();
 $help = new Helper($config);
-$pageItems = $help->getCurrentBlogPage($_POST["currentPage"],null);
+$pageItems = $help->getCurrentBlogPage($_POST["currentPage"],(($_POST["contentHashId"] != "") ? $_POST["contentHashId"] : null));
 $content = "";
 for($i = 0; $i < count($pageItems); $i++){
 	$content .= '<div class="row">';
@@ -27,7 +27,8 @@ $content .= '$(".showBlogDetail").click(function(){ loadBlogDetailAndShow($(this
 $content .= '</script>';
 $response_array['status'] = (($pageItems != null) ? "success" : "error");
 $response_array['content'] = $content;
-$response_array['currentPage'] = $help->getBlogPageCount();
+$response_array['totalPage'] = $help->getBlogPageCount();
+$response_array['currentPage'] = $pageItems[0]["currentPage"];
 header('Content-type: application/json');
 echo json_encode($response_array);
 ?>

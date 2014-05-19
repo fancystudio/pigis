@@ -8,7 +8,7 @@ $content = '<div class="modal fade blogModalDetail" id="blogContent'.$pageItems[
 $content .= $pageItems[0]["content"];
 $content .= '</div>';
 $content .= '<script type="text/javascript">';
-$content .= '$(".blogModal").on("show.bs.modal", function () { console.log($(this)); window.location.hash = $(this).attr("id"); });';
+$content .= '$(".blogModalDetail").on("show.bs.modal", function () { window.location.hash = $(this).attr("id"); });';
 $content .= '</script>';
 $response_array['status'] = (($pageItems != null) ? "success" : "error");
 $response_array['content'] = $content;

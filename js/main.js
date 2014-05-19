@@ -10,13 +10,9 @@ $(document).ready(function() {
 		resize: false,
 		autoScrolling: false
 	});
-	
-	if(window.location.hash != "#domov"
-		&& window.location.hash != "#onas"
-		&& window.location.hash != "#jedalny-listok"
-		&& window.location.hash != "#galeria"
-		&& window.location.hash != "#nauc-sa-chefovat"
-		&& window.location.hash != "#kontakt"){
+	hashTag = window.location.hash;
+	isHashFromBlog = isHashFromBlog(hashTag);
+	if(isHashFromBlog){
 			loadBlogDetailAndShow(window.location.hash, "pageInit");
 	}
 	
@@ -25,21 +21,22 @@ $(document).ready(function() {
 		url: "lib/getBlogContentAjax.php",
 		data: {
 			currentPage : 1,
-			contentHash : window.location.hash
+			contentHashId : (isHashFromBlog ? hashTag.substr(12) : "")
 		},
 		beforeSend: function(){},
 		success: function(response){
 			if(response.status == "success"){
 				$(".blogContent .blogThumbs").html(response.content);
 				$('.pagination').bootpag({
-			        total: response.currentPage
+			        total: response.totalPage,
+			        page: response.currentPage
 			    }).on("page", function(event, num){
 			    	$.ajax({
 			    		type: "POST",
 			    		url: "lib/getBlogContentAjax.php",
 			    		data: {
 				    		currentPage : num,
-			    			contentHash : ""
+				    		contentHashId : ""
 			    		},
 			    		beforeSend: function(){},
 			    		success: function(response){
@@ -66,6 +63,21 @@ $(document).ready(function() {
 	});
 	newsletterSend();
 });
+function isHashFromBlog(hashTag){
+	if(hashTag != "#domov"
+		&& hashTag != "#onas"
+		&& hashTag != "#jedalny-listok"
+		&& hashTag != "#galeria"
+		&& hashTag != "#nauc-sa-chefovat"
+		&& hashTag != "#kontakt"
+		&& hashTag.substr(0, 12) == "#blogContent" 
+		&& isNumber(hashTag.substr(12))
+		){
+		return true;
+	}else{
+		return false;
+	}
+}
 function loadBlogDetailAndShow(hashTag, typeOfRequest){
 	if(hashTag.substr(0, 12) == "#blogContent" && isNumber(hashTag.substr(12))){
 		blogId = hashTag.substr(12);
