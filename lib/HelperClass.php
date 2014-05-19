@@ -34,7 +34,6 @@ class Helper
 				$pageItems[$blogCount]["title"] = $row->cgblog_title;
 				$pageItems[$blogCount]["date"] = date("d.m.Y h:i:s", strtotime($row->cgblog_date));
 				$pageItems[$blogCount]["summary"] = $this->truncate($row->summary, 450);
-				$pageItems[$blogCount]["content"] = $row->cgblog_data;
 				$pageItems[$blogCount]["img"] = "uploads/cgblog/id".$row->cgblog_id."/".$row->value;
 				$blogCount++;
 			}
