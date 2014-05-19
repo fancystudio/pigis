@@ -80,10 +80,8 @@ a {
 
 #section4 {
 	background-image: url(../img/nauc-sa-bg.jpg);
-}
-
-#section4 {
-	height: auto !important
+	height: auto !important;
+	min-height: 100%;
 }
 
 

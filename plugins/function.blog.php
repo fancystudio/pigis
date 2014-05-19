@@ -23,9 +23,9 @@ function smarty_function_blog($params, &$template){
 	<h1><img src="img/titles/nauc-sa-chefovat.png" alt="nauč sa chefovať"></h1>
 	</div>
 	
-	<div class="blogContent container">
-		<div class="blogThumbs container"></div>
-		<div class="blogModal container"></div>
+	<div class="blogContent">
+		<div class="blogThumbs"></div>
+		<div class="blogModal"></div>
 	</div>
 			
 	<div class="pagination col-md-10 col-md-offset-1">
