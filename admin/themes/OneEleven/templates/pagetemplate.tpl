@@ -9,12 +9,6 @@
 		<meta name="viewport" content="initial-scale=1.0 maximum-scale=1.0 user-scalable=no" />
 		<meta name="HandheldFriendly" content="True"/>
 		<link rel="shortcut icon" href="{$config.admin_url}/themes/OneEleven/images/favicon/cmsms-favicon.ico"/>
-		<link rel='apple-touch-icon' href='{$config.admin_url}/themes/OneEleven/images/favicon/apple-touch-icon-iphone.png' /> 
-		<link rel='apple-touch-icon' sizes='72x72' href='{$config.admin_url}/themes/OneEleven/images/favicon/apple-touch-icon-ipad.png' /> 
-		<link rel='apple-touch-icon' sizes='114x114' href='{$config.admin_url}/themes/OneEleven/images/favicon/apple-touch-icon-iphone4.png' />
-		<link rel='apple-touch-icon' sizes='144x144' href='{$config.admin_url}/themes/OneEleven/images/favicon/apple-touch-icon-ipad3.png' />		
-		<meta name='msapplication-TileImage' content='{$config.admin_url}/themes/OneEleven/images/favicon/ms-application-icon.png' />
-		<meta name='msapplication-TileColor' content='#f89938'>
 		<link rel="stylesheet" href="style.php?{$secureparam}" />
 		<!-- learn IE html5 -->
 		<!--[if lt IE 9]>
@@ -24,11 +18,11 @@
 		<!-- THIS IS WHERE HEADER STUFF SHOULD GO -->
 	 	{$headertext|default:''}
 		<!-- custom jQueryUI Theme 1.8.21 see style.css or link in UI Stylesheet for color reference //-->
-		<link href="{$config.admin_url}/themes/OneEleven/css/default-cmsms/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+		<link href="{$config.admin_url}/themes/OneEleven/css/default-cmsms/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
         {module_available name='FileManager' assign='fmgood'}
         {if isset($fmgood) && $fmgood}{cms_module module=FileManager action='javascript'}{/if}
 	</head>
-	<body##BODYSUBMITSTUFFGOESHERE## lang="{$lang|truncate:'2':''}" id="{$pagetitle|md5}" class="oe_{$pagealias}">
+	<body##BODYSUBMITSTUFFGOESHERE## lang="{$lang|truncate:'2':''}" id="{$pagetitle|md5}" class="{$pagealias}">
 		<!-- start container -->
 		<div id="oe_container" class="sidebar-on">
 			<!-- start header -->
@@ -37,10 +31,10 @@
 				<div class="header-top cf">
 					<!-- logo -->
 					<div class="cms-logo">
-						<a href="http://www.cmsmadesimple.org" rel="external"><img src="{$config.admin_url}/themes/OneEleven/images/layout/cmsms-logo.jpg" width="205" height="69" alt="CMS Made Simple" title="CMS Made Simple" /></a>
+						<a href="http://www.fancystudio.sk" rel="external"><img style="margin-top:11px;" src="{$config.admin_url}/themes/OneEleven/images/logoCMS.png" width="230" height="45" alt="CMS Made Simple" title="CMS Made Simple" /></a>
 					</div>
 					<!-- title -->
-					<span class="admin-title"> {'adminpaneltitle'|lang} - {sitename}{if !empty($pagetitle)} - {$pagetitle}{/if}</span>
+					<span class="admin-title"> <!--{'adminpaneltitle'|lang} - -->{sitename}{if !empty($pagetitle)} - {$pagetitle}{/if}</span>
 				</div>
 				<div class='clear'></div>
 				<!-- end header-top //-->
@@ -48,7 +42,7 @@
 				<div class="header-bottom cf">
 					<!-- welcome -->
 					<div class="welcome">
-						<span><a class="welcome-user" href="myaccount.php?{$secureparam}" title="{'myaccount'|lang}">{'myaccount'|lang}</a> {'welcome_user'|lang}: <a href="myaccount.php?{$secureparam}">{$user->username}</a></span>
+						<span><a class="welcome-user" href="myaccount.php?{$secureparam}" title="{'myaccount'|lang}">{'myaccount'|lang}</a> {'welcome_user'|lang}: <!-- <a href="myaccount.php?{$secureparam}">-->{$user->username}<!--</a>--></span>
 					</div>
 					<!-- breadcrubms -->
 					{include file='breadcrumbs.tpl' items=$theme->get_breadcrumbs()} 
@@ -87,9 +81,9 @@
 							<h1>{if isset($module_icon_url)}<img src="{$module_icon_url}" alt="{$module_name|default:''}" class="module-icon" />{/if}
 							{$pagetitle|default:''}
 							</h1>
-							{if isset($module_help_url) or isset($wiki_url)} <span class="helptext"> {if isset($module_help_url)}<a href="{$module_help_url}">{'module_help'|lang}</a>{/if}
-								{if isset($wiki_url)}<a href="{$wiki_url}" class="external" target="_blank">{'help'|lang}</a> <em>({'new_window'|lang})</em>{/if} </span> {/if}
-							{/if}
+							{if isset($module_help_url) or isset($wiki_url)} <!--<span class="helptext"> {if isset($module_help_url)}<a href="{$module_help_url}">{'module_help'|lang}</a>{/if}
+								{if isset($wiki_url)}<a href="{$wiki_url}" class="external" target="_blank">{'help'|lang}</a> <em>({'new_window'|lang})</em>{/if} </span>--> {/if}
+							{/if} 
 							{* filemanager dropzone *}							
 							{if isset($droparea) && !isset($is_ie)}
 								{$droparea}

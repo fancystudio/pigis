@@ -31,17 +31,15 @@
 							<p><strong>({$smarty.server.HTTP_HOST})</strong></p>					
 						<p class="warning">{'warn_admin_ipandcookies'|lang}</p>
 					</aside>
-					<a href="#" title="{'open'|lang}/{'close'|lang}" class="toggle-info">{'open'|lang}/{'close'|lang}</a>
+					<!--<a href="#" title="{'open'|lang}/{'close'|lang}" class="toggle-info">{'open'|lang}/{'close'|lang}</a>-->
 					</div>					
 					<header>
-						<h1>{'logintitle'|lang}</h1>
+						<h1>Prihlásenie do administrácie</h1>
 					</header>
 					<form method="post" action="login.php">
 						<fieldset>
-                                                        {assign var='usernamefld' value='username'}
-							{if isset($smarty.get.forgotpw)}{assign var='usernamefld' value='forgottenusername'}{/if}
 							<label for="lbusername">{'username'|lang}</label>
-							<input id="lbusername"{if !isset($smarty.post.lbusername)} class="focus"{/if} placeholder="{'username'|lang}" name="{$usernamefld}" type="text" size="15" value="" autofocus="autofocus" />
+							<input id="lbusername"{if !isset($smarty.post.lbusername)} class="focus"{/if} placeholder="{'username'|lang}" name="username" type="text" size="15" value="" />
 						{if isset($smarty.get.forgotpw) && !empty($smarty.get.forgotpw)}
 							<input type="hidden" name="forgotpwform" value="1" />
 						{/if}
@@ -84,9 +82,9 @@
 							{'passwordchange'|lang}
 						</div>
 					{/if} <a href="{root_url}" title="{'goto'|lang} {sitename}"> <img class="goback" width="16" height="16" src="{$config.admin_url}/themes/OneEleven/images/layout/goback.png" alt="{'goto'|lang} {sitename}" /> </a>
-					<p class="forgotpw">
+					<!--<p class="forgotpw">
 						<a href="login.php?forgotpw=1">{'lostpw'|lang}</a>
-					</p>
+					</p>-->
 				</div>			
 				<footer>
 					<small class="copyright">Copyright &copy; <a rel="external" href="http://www.cmsmadesimple.org">CMS Made Simple&trade;</a></small>

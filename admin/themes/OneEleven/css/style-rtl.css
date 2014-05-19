@@ -456,11 +456,11 @@ div.pagecontainer .h-inside {
 }
 /* Format code chunks */
 pre, code, samp, kbd {
-	font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier New', monospace;
+	font-family: "Courier New", Courier, monospace, sans-serif;
 	text-align: left;
 	color: #232323;
 	height: auto;
-	font-size: 12px
+	font-size: 11px
 	}
 pre code {
 
@@ -517,14 +517,8 @@ input {
 	text-indent: 5px;
 	margin-left: 5px
 }
-/*
 input[type='text'] {
 	min-width: 25%
-}
-*/
-input[type='text']#in_title,
-input[type='text']#in_menutext {
-	min-width: 30%
 }
 input:hover, 
 input:focus, 
@@ -680,21 +674,6 @@ aside.message,
 	margin:0;
 	right: 35%
 }
-aside .no-slide,
-.no-slide  {
-	position: inherit;
-	left: auto;
-	top: auto;
-	border-radius: 4px;
-	box-shadow: none;
-	border: 1px solid #ae432e;
-	-webkit-box-shadow: none;
-	background-image: none;
-	width: auto;
-	display: block;
-	z-index: 0
-}
-.p
 .pageerrorcontainer ul {
 	border: none;
 	margin-right: 25px;
@@ -917,8 +896,6 @@ header .cms-logo {
 header .admin-title {
 	text-align: right;
 	display: inline-block;
-	max-width: 70%;
-	overflow: hidden;	
 	height: 70px;
 	font: bold 14px/70px sans-serif;
 	margin-left: 20px;
@@ -1073,7 +1050,7 @@ header .shortcuts li.favorites a {
 #oe_sidebar .toggle-button {
 	text-indent: -9999em;
 	overflow: hidden;
-	z-index: 100;
+	z-index: 900;
 	display: block;
 	cursor: pointer;
 	width: 24px;
@@ -1641,10 +1618,6 @@ td.pageicon {
 td.icons_wide {
 	width: 25px
 }
-/*** File Manager ***/
-#filesarea img {
-	max-width: 32px
-}
 /*** iframe ***/
 iframe.imageframe {
 	margin-top: 10px;
@@ -1755,9 +1728,9 @@ textarea.pagebigtextarea {
 	height: 40em;
 	width: 55em
 }
-.pageinput textarea {
-	font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier New', monospace;
-	font-size: 12px;
+.pageinput textarea
+{
+	font-family: "Courier New", Courier, monospace, sans-serif;
 	line-height: 1.6
 }
 textarea.pagesmalltextarea {
@@ -2006,21 +1979,6 @@ a.toggle-dropzone:focus {
 	}
 	
 @media screen and (max-width: 1024px) {
-	@-ms-viewport {
-		width: device-width;
-	}
-	@-o-viewport {
-		width: device-width;
-	}
-	@-moz-viewport {
-		width: device-width;
-	}
-	@-webkit-viewport {
-		width: device-width;
-	}
-	@viewport {
-		width: device-width;
-	}	
 	/* change tabs to full width on smaller screen size */
 	.sidebar-on #page_tabs div {
 		text-align: right;
@@ -2091,21 +2049,6 @@ a.toggle-dropzone:focus {
 }
 /* --- SCREEN UP TO 768px --- */
 @media screen and (max-width: 768px) {	
-	@-ms-viewport {
-		width: device-width;
-	}
-	@-o-viewport {
-		width: device-width;
-	}
-	@-moz-viewport {
-		width: device-width;
-	}
-	@-webkit-viewport {
-		width: device-width;
-	}
-	@viewport {
-		width: device-width;
-	}	
 	/* override our predefined min-with for smaller screens and full height stuff */
 	body {
 		margin: 0;
@@ -2263,21 +2206,6 @@ a.toggle-dropzone:focus {
 	}	
 }
 @media screen and (max-width: 480px) {
-	@-ms-viewport {
-		width: device-width;
-	}
-	@-o-viewport {
-		width: device-width;
-	}
-	@-moz-viewport {
-		width: device-width;
-	}
-	@-webkit-viewport {
-		width: device-width;
-	}
-	@viewport {
-		width: device-width;
-	}	
 	aside.message,
 	.pagemcontainer,
 	.pageerrorcontainer,

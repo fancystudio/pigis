@@ -1,6 +1,7 @@
 {strip}
-
 {foreach from=$nodes item='node' name='box'}
+{if $node.name != "myprefs"}
+{if $node.name != "images"}
 {assign var='icon' value="themes/OneEleven/images/icons/topfiles/`$node.name`"}
 {assign var='module' value="../modules/`$node.name`/images/icon"}
 	{if $node.show_in_menu && $node.url && $node.title}
@@ -23,14 +24,16 @@
 			</h3>
 			{if $node.description}
 			<span class="description">{$node.description}</span>
-			{/if}
 			{if isset($node.children)}
 			<h4>{'subitems'|lang}</h4>
 			<ul class="subitems cf">
 			{foreach from=$node.children item='one'}
-			 	<li><a href="{$one.url}"{if isset($one.target)} target="{$one.target}"{/if}>{$one.title}</a></li>
-			{/foreach} 
+        {if $one.name != "images"}
+			 	<li><a href="{$one.url}">{$one.title}</a></li>
+			  {/if}
+      {/foreach} 
 			</ul>
+			{/if}
 			{/if}
 		</nav>
 	</div>
@@ -38,6 +41,8 @@
 	<div class="clear"></div>
 	{/if}
 	{/if}
+  {/if}
+  {/if}
 {/foreach}
 
 {/strip}

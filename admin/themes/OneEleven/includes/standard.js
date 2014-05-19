@@ -154,14 +154,14 @@ jQuery(document).ready(function($) {
 	}
 
 	// Jquery UI DIALOG
-	$(function() {
+	jQuery(function() {
 		var dialogs = {};
 		$('.dialog').each(function() {
 			var dialog_id = $(this).prev('.open').attr('title');
 			dialogs[dialog_id] = $(this).dialog({
 				autoOpen : false,
 				modal: true,
-				title : $(this).attr('title')
+				title : '<strong> ' + $(this).attr('title') + ' </strong>'
 			});
 		});
 		$('.open').click(function(event) {
@@ -172,7 +172,7 @@ jQuery(document).ready(function($) {
 		});
 	});
 	// SIDEBAR MENU
-	$(function() {
+	jQuery(function() {
 		var pagemenu = $('#oe_pagemenu');
 		pagemenu.find('li.current span').addClass('open-sub');
 		pagemenu.find('> li > span').click(function() {
@@ -184,7 +184,7 @@ jQuery(document).ready(function($) {
 		});
 	});
 	// SIDEBAR MENU Mobile check
-	$(function() {
+	jQuery(function() {
 		if(navigator.userAgent.match(/(Android|iPhone|iPad|iPod|Blackberry|Dolphin|IEMobile|Kindle|Mobile|MMP|MIDP|Pocket|PSP|Symbian|Smartphone|Sreo|Up.Browser|Up.Link|Vodafone|WAP|Opera Mini|Opera Tablet|Mobile|Fennec)/)) {
 		} else {
 			$(window).scroll(function() {
@@ -196,8 +196,8 @@ jQuery(document).ready(function($) {
 		} 
 	});
 	// BUTTONS
-	$(function() {
-		$('body').off('cms_ajax_apply');
+	jQuery(function() {
+		jQuery('body').off('cms_ajax_apply');
 		$('input[type="submit"], input[type="button"]').each(function() {
 			if($(this).attr('name') == 'apply' || $(this).attr('name') == 'm1_apply') {
 				var icon = 'ui-icon-disk';
@@ -229,7 +229,7 @@ jQuery(document).ready(function($) {
 				$(this).removeClass('ui-state-hover');
 			});
 		// Handle ajax apply
-		$('body').on('cms_ajax_apply', function(e) {
+		jQuery('body').on('cms_ajax_apply', function(e) {
 			// gotta get langified string here.
 			$('button[name=cancel], button[name=m1_cancel]').fadeOut();
 			$('button[name=cancel], button[name=m1_cancel]').button('option', 'label', e.close);
@@ -255,7 +255,7 @@ jQuery(document).ready(function($) {
 		});
 	});
 	// SHOW/HIDE NOTIFICATIONS
-	$(function() {
+	jQuery(function() {
 		$('.pagewarning, .message, .pageerrorcontainer, .pagemcontainer').prepend('<span class="close-warning"></span>');
 		$('.close-warning').click(function() {
 			$(this).parent().hide();
@@ -274,10 +274,10 @@ jQuery(document).ready(function($) {
 			$('.pagewarning').addClass('hidden');
 		}
 		
-		$('.message:not(.no-slide)').click(function() {
+		$('.message').click(function() {
 				$('.message').slideUp();
 			});
-		$('.message:not(.no-slide), .pageerrorcontainer:not(.no-slide), .pagemcontainer:not(.no-slide)').each(function() {
+		$('.message, .pageerrorcontainer, .pagemcontainer').each(function() {
 			var message = $(this);
 			$(message).hide()
 				.slideDown(1000, function() {

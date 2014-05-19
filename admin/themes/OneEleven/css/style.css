@@ -456,11 +456,11 @@ div.pagecontainer .h-inside {
 }
 /* Format code chunks */
 pre, code, samp, kbd {
-	font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier New', monospace;
+	font-family: "Courier New", Courier, monospace, sans-serif;
 	text-align: left;
 	color: #232323;
 	height: auto;
-	font-size: 12px
+	font-size: 11px
 	}
 pre code {
 
@@ -517,15 +517,9 @@ input {
 	text-indent: 5px;
 	margin-right: 5px
 }
-/*
 input[type='text'] {
 	min-width: 25%
 }
-*/
-input[type='text']#in_title,
-input[type='text']#in_menutext {
-	min-width: 30%
-} 
 input:hover, 
 input:focus, 
 textarea:hover, 
@@ -686,20 +680,6 @@ aside.message,
 	margin:0;
 	left: 35%
 }
-aside .no-slide,
-.no-slide  {
-	position: inherit;
-	left: auto;
-	top: auto;
-	border-radius: 4px;
-	box-shadow: none;
-	border: 1px solid #ae432e;
-	-webkit-box-shadow: none;
-	background-image: none;
-	width: auto;
-	display: block;
-	z-index: 0
-}
 .pageerrorcontainer ul {
 	border: none;
 	margin-left: 25px;
@@ -761,8 +741,6 @@ header .cms-logo {
 }
 header .admin-title {
 	text-align: right;
-	max-width: 70%;
-	overflow: hidden;
 	display: inline-block;
 	height: 70px;
 	font: bold 14px/70px sans-serif;
@@ -914,7 +892,7 @@ header .shortcuts li.favorites a {
 /* toggle sidebar */
 #oe_sidebar .toggle-button {
 	text-indent: -9999em;
-	z-index: 100;
+	z-index: 900;
 	display: block;
 	cursor: pointer;
 	width: 24px;
@@ -1255,6 +1233,9 @@ footer#oe_footer a:hover, footer#oe_footer a:active {
 #oe_mainarea header.pageheader.drop-hidden span.helptext {
 	margin-right: 0
 }
+.pageheader .drop{
+  display:none;
+}
 span.helptext a.external,
 span.helptext a {
 	display: inline-block;
@@ -1486,10 +1467,6 @@ td.pageicon {
 td.icons_wide {
 	width: 25px
 }
-/*** File Manager ***/
-#filesarea img {
-	max-width: 32px
-}
 /*** iframe ***/
 iframe.imageframe {
 	margin-top: 10px;
@@ -1539,7 +1516,7 @@ div.pagecontainer .pageshowrows {
 	margin-bottom: 5px
 }
 div.pagecontainer span.helptext {
-	display: inline-block
+	display: none
 }
 /*** content forms ***/
 div.pagecontainer .pageinput {
@@ -1599,9 +1576,9 @@ textarea.pagebigtextarea {
 	height: 40em;
 	width: 55em
 }
-.pageinput textarea {
-	font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier New', monospace;
-	font-size: 12px;
+.pageinput textarea
+{
+	font-family: "Courier New", Courier, monospace, sans-serif;
 	line-height: 1.6
 }
 textarea.pagesmalltextarea {
@@ -1868,7 +1845,7 @@ a.toggle-dropzone:focus {
 	height: 36px;
 	position: absolute;
 	right: 10px;
-	top: -29px
+	top: -45px
 }
 #login div.login-box {
   background: #d5d5d5 url(themes/OneEleven/images/layout/sprite_repeatx.png) 214px -339px repeat-x;
@@ -2004,7 +1981,8 @@ a.toggle-dropzone:focus {
 }
 #login .copyright {
 	margin: 5px auto;
-	text-align: center
+	text-align: center;
+	display:none
 }
 #login small {
 	text-align: center;
@@ -2022,21 +2000,6 @@ a.toggle-dropzone:focus {
 }
 /* --- SCREEN UP TO 1024px --- */
 @media screen and (max-width: 1024px) {
-	@-ms-viewport {
-		width: device-width;
-	}
-	@-o-viewport {
-		width: device-width;
-	}
-	@-moz-viewport {
-		width: device-width;
-	}
-	@-webkit-viewport {
-		width: device-width;
-	}
-	@viewport {
-		width: device-width;
-	}	
 	/* change tabs to full width on smaller screen size */
 	.sidebar-on #page_tabs div {
 		text-align: left;
@@ -2110,21 +2073,6 @@ a.toggle-dropzone:focus {
 }
 /* --- SCREEN UP TO 768px --- */
 @media screen and (max-width: 768px) {	
-	@-ms-viewport {
-		width: device-width;
-	}
-	@-o-viewport {
-		width: device-width;
-	}
-	@-moz-viewport {
-		width: device-width;
-	}
-	@-webkit-viewport {
-		width: device-width;
-	}
-	@viewport {
-		width: device-width;
-	}
 	/* override our predefined min-with for smaller screens and full height stuff */
 	body {
 		margin: 0;
@@ -2281,22 +2229,10 @@ a.toggle-dropzone:focus {
 		padding-top: 2%
 	}	
 }
+#oe_sidebar .notification a{
+  display:none !important; 
+}
 @media screen and (max-width: 480px) {
-	@-ms-viewport {
-		width: device-width;
-	}
-	@-o-viewport {
-		width: device-width;
-	}
-	@-moz-viewport {
-		width: device-width;
-	}
-	@-webkit-viewport {
-		width: device-width;
-	}
-	@viewport {
-		width: device-width;
-	}
 	aside.message,
 	.pagemcontainer,
 	.pageerrorcontainer,
@@ -2327,3 +2263,4 @@ a.toggle-dropzone:focus {
 		display: none
 	}
 }
+
