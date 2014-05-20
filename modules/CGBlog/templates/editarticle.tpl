@@ -77,7 +77,7 @@ $(document).ready(function() {
 {if isset($start_tab_headers)}
 {$start_tab_headers}
 {$tabheader_article}
-{$tabheader_preview}
+<!--{$tabheader_preview} -->
 {$end_tab_headers}
 
 {$start_tab_content}
@@ -119,12 +119,12 @@ $(document).ready(function() {
   </div>{* .grid_8 *}
 
   <div class="grid_4">
-    <div class="pageoverflow">
+   <!-- <div class="pageoverflow">
       <p class="pagetext">{$mod->Lang('url')}:</p>
       <p class="pageinput">
         <input id="article_url" type="text" name="{$actionid}url" value="{$url}" size="80" maxlength="255"/>
       </p>
-    </div>
+    </div> --> 
 
     {if isset($statustext)}
     <div class="pageoverflow">
@@ -154,7 +154,7 @@ $(document).ready(function() {
 </div>{* .c_full *}
 
 <div class="c_full">
-  <div class="pageoverflow">
+  <!-- <div class="pageoverflow">
     <p class="pagetext">{$extratext}:</p>
     <p class="pageinput">{$inputextra}</p>
   </div>
@@ -162,7 +162,7 @@ $(document).ready(function() {
   <div class="pageoverflow">
     <p class="pagetext">{$useexpirationtext}:</p>
     <p class="pageinput">{$inputexp}</p>
-  </div>
+  </div> -->
 
   <div class="pageoverflow">
     <p class="pagetext">{$startdatetext}:</p>
@@ -189,7 +189,7 @@ $(document).ready(function() {
 {if isset($end_tab_article)}{$end_tab_article}{/if}
 
 {if isset($start_tab_preview)}
-{$start_tab_preview}
+<!-- {$start_tab_preview}
 <script type="text/javascript">{literal}
 jQuery(document).ready(function(){
   jQuery('[name=m1_apply]').live('click',function(){
@@ -275,8 +275,8 @@ jQuery(document).ready(function(){
   {$preview_returnid}
 </fieldset>
 <br/>
-<iframe id="previewframe" style="height: 800px; width: 100%; border: 1px solid black; overflow: auto;" src=""></iframe>
-{$end_tab_preview}
+<iframe id="previewframe" style="height: 800px; width: 100%; border: 1px solid black; overflow: auto;" src=""></iframe>-->
+<!-- {$end_tab_preview} -->
 {$end_tab_content}
 {/if}
 

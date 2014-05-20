@@ -95,12 +95,12 @@ $(document).ready(function(){
   {$formend}
 </fieldset>
 {/if}
-
+<!-- 
 <div class="pageoptions">
   <input type="checkbox" id="toggle_filter" value="0"><label for="toggle_filter">{$mod->Lang('toggle_filter')}</label>&nbsp;
   <a href="{$add_url}">{cgimage image='icons/system/newobject.gif' alt=$mod->Lang('addarticle')} {$mod->Lang('addarticle')}</a>
 </div>
-
+-->
 {if $itemcount > 0}
 {if $pagecount > 1}
   <p>
@@ -120,7 +120,7 @@ $(document).ready(function(){
 		<tr>
 			<th>{$titletext}</th>
 			<th>{$authortext}</th>
-			<th>{$mod->Lang('url')}</th>
+			<!-- <th>{$mod->Lang('url')}</th> -->
 			<th>{$postdatetext}</th>
                         <th>{$startdatetext}</th>
                         <th>{$enddatetext}</th>
@@ -128,7 +128,7 @@ $(document).ready(function(){
 			{if isset($have_blaster)}<th class="pageicon {literal}{sorter: false}{/literal}">&nbsp;</th>{/if}
 			<th class="pageicon {literal}{sorter: false}{/literal}">&nbsp;</th>
 			<th class="pageicon {literal}{sorter: false}{/literal}">&nbsp;</th>
-			<th class="pageicon {literal}{sorter: false}{/literal}"><input type="checkbox" id="selectall" name="selectall"/></th>
+			<!-- <th class="pageicon {literal}{sorter: false}{/literal}"><input type="checkbox" id="selectall" name="selectall"/></th> -->
 		</tr>
 	</thead>
 	<tbody>
@@ -141,7 +141,7 @@ $(document).ready(function(){
                           {$entry->title|cms_escape}</td>
                         {/if}
 			<td>{$entry->author}</td>
-			<td>{$entry->url}</td>
+			<!-- <td>{$entry->url}</td> -->
 			<td>{$entry->u_postdate|cms_date_format}</td>
                         <td>{if !empty($entry->u_enddate)}{$entry->u_startdate|cms_date_format}{/if}</td>
                         <td>{if $entry->expired == 1}
@@ -165,13 +165,13 @@ $(document).ready(function(){
                         </td>{/if}
 			<td>{$entry->editlink}</td>
 			<td>{$entry->deletelink}</td>
-			<td><input type="checkbox" name="{$actionid}sel[]" value="{$entry->id}" class="select">
+			<!-- <td><input type="checkbox" name="{$actionid}sel[]" value="{$entry->id}" class="select"> -->
 		</tr>
 	{/foreach}
 	</tbody>
 </table>
 {/if}
-
+<!-- 
 {if $itemcount > 0}
 <div class="pageoptions">
   <div style="float: right; text-align: right;">{$mod->Lang('with_selected')}:<br/>
@@ -181,5 +181,5 @@ $(document).ready(function(){
   <div style="clear: both;"></div>
 </div>
 {/if}
-
+-->
 {$form2end}

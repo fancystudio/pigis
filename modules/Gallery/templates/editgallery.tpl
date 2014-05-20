@@ -83,7 +83,7 @@
   <p class="pageinput">{$moveto}</p>
 </div>
 {/if}
-<div class="pageoverflow">
+<!-- <div class="pageoverflow">
   <p class="pagetext">{$prompt_gallerytitle}:</p>
   <p class="pageinput">{$gallerytitle}</p>
 </div>
@@ -130,11 +130,11 @@
 <div class="pageoverflow">
   <p class="pagetext">{$prompt_hideparentlink}:</p>
   <p class="pageinput">{$hideparentlink}</p>
-</div>
+</div> -->
 
 <div class="pageoverflow">
   <p class="pagetext">&nbsp;</p>
-  <p class="pageinput">{$submit}{$cancel}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$unsort}{$updatethumbs}</p>
+  <p class="pageinput">{$submit}{$cancel}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- {$unsort} {$updatethumbs} --></p>
 	<p>&nbsp;</p>
 </div>
 
@@ -143,7 +143,7 @@
 {*		<div style="width: 180px; height: 18px; border: solid 1px #7FAAFF; background-color: #C5D9FF; padding: 2px;">*}
 {*		</div>*}
 
-  {$addgallery} <span id="spanButtonPlaceholder"></span>{$addimages}
+ <!-- {$addgallery} --><span id="spanButtonPlaceholder"></span>{$addimages}
 
 </div>
 <div class="pageoverflow">
@@ -161,11 +161,11 @@
 			<th>{$title}</th>
 			<th>{$comment}</th>
 			<th>{$filedate}</th>
-			<th class="pageicon">{$cover}</th>
+			<!-- <th class="pageicon">{$cover}</th> -->
 			<th class="pageicon">{$active}</th>
+			<!-- <th class="pageicon">&nbsp;</th> -->
 			<th class="pageicon">&nbsp;</th>
-			<th class="pageicon">&nbsp;</th>
-			<th class="pageicon"><input id="selectall" type="checkbox" /></th>
+			<!-- <th class="pageicon"><input id="selectall" type="checkbox" /></th> -->
 		</tr>
 		</thead>
 		<tbody>
@@ -177,11 +177,11 @@
 			<td{if $entry->isdir} colspan="2"{/if}>{$entry->filename_input}<br />{$entry->title_input}</td>
 			{if !$entry->isdir}<td>{$entry->comment_input}</td>{/if}
 			<td class="datepicker">{$entry->filedate_input}</td>
-			<td class="pagepos" style="text-align:center">{$entry->defaultlink}</td>
+			<!-- <td class="pagepos" style="text-align:center">{$entry->defaultlink}</td> -->
 			<td class="pagepos" style="text-align:center">{$entry->activelink}{$entry->active}</td>
-			<td class="pagepos" style="text-align:center">{$entry->editlink}</td>
+			<!-- <td class="pagepos" style="text-align:center">{$entry->editlink}</td> -->
 			<td class="pagepos" style="text-align:center">{$entry->deletelink}</td>
-			<td class="checkbox">{$entry->imgselect}</td>
+			<!-- <td class="checkbox">{$entry->imgselect}</td> -->
 		</tr>
 	{/foreach}
 		</tbody>
@@ -189,12 +189,12 @@
 
 {if $itemcount > 0}
 <div class="pageoptions">
-	<div style="margin-top: 0; float: right; text-align: right">
+	<!-- <div style="margin-top: 0; float: right; text-align: right">
 		{$prompt_multiaction}: {$multiaction} {$multiactionsubmit}<br /><div style="margin-top:6px;">{$moveto}</div>
-	</div>
+	</div> -->
 
 	<div class="pageoverflow">
-		<p class="pageinput">{$submit}{$cancel}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$unsort}{$updatethumbs}</p>
+		<p class="pageinput">{$submit}{$cancel}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- {$unsort} {$updatethumbs} --></p>
 	</div>
 </div>
 {elseif $itemcount == 0}
