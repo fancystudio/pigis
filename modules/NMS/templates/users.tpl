@@ -73,7 +73,7 @@ $(document).ready(function(){
 </fieldset>
 
 <div class="pageoptions"><p class="pageoptions">
-<input type="checkbox" id="showfilter"{if $is_filtered}checked="checked"{/if} value="1"/>{$mod->Lang('show_filter')}&nbsp;
+ <!-- <input type="checkbox" id="showfilter"{if $is_filtered}checked="checked"{/if} value="1"/>{$mod->Lang('show_filter')}&nbsp; -->
 {$itemcount}&nbsp;{$itemsfound}&nbsp;{$oftext}&nbsp;{$totalitems}</p></div>
 {if isset($pagecount) && $pagecount != ''}
 <div class="pageoverflow">
@@ -94,7 +94,7 @@ $(document).ready(function(){
   <th>{$mod->Lang('errors')}</th>
   <th class="pageicon">&nbsp;</th>
   <th class="pageicon">&nbsp;</th>
-  <th class="pageicon"><input type="checkbox" id="users_selectall" name="users_selectall" value="1" {*onclick="toggle_nms_users_selectall();*}"/></th>
+  <!--<th class="pageicon"><input type="checkbox" id="users_selectall" name="users_selectall" value="1" {*onclick="toggle_nms_users_selectall();*}"/></th>-->
   </tr>
  </thead>
  <tbody>
@@ -109,7 +109,7 @@ $(document).ready(function(){
     <td>{$entry->errors}</td>
     <td>{$entry->editlink}</td>
     <td>{$entry->deletelink}</td>
-    <td><input type="checkbox" class="user_selected" name="{$actionid}user_selected[]" value="{$entry->user}"/></td>
+   <!-- <td><input type="checkbox" class="user_selected" name="{$actionid}user_selected[]" value="{$entry->user}"/></td> -->
   </tr>
 {/foreach}
  </tbody>
@@ -117,12 +117,12 @@ $(document).ready(function(){
 {/if}
 <div class="pageoptions" style="height: 3em;">
   <div style="float: left; width: 40%;">
-    {$createlink}&nbsp;{$importlink}&nbsp;{$feuimportlink|default:''}&nbsp;{$exportlink}&nbsp;{$bounceslink}
+    {$createlink}&nbsp; <!--{$importlink}&nbsp;{$feuimportlink|default:''}&nbsp;{$exportlink}&nbsp;{$bounceslink} -->
   </div>
-  <div style="float: right; text-align: right; width: 40%; margin-top: 1em;">
+  <!--<div style="float: right; text-align: right; width: 40%; margin-top: 1em;">
     {$mod->Lang('with_selected')}:&nbsp;&nbsp;{$bulk_actions}
     <input type="submit" name="{$actionid}bulk_submit" value="{$mod->Lang('submit')}" onclick="confirm('{$mod->Lang('confirm_bulkactions')}');"/>
-  </div>
+  </div> -->
 </div>
 {$formend2}
 {/if}

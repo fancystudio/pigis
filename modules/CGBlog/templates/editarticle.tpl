@@ -71,7 +71,7 @@ $(document).ready(function() {
 {$startform}
 <div class="pageoverflow">
   <p class="pagetext">&nbsp;</p>
-  <p class="pageinput">{$hidden}{$submit}{$cancel}{if isset($apply)}{$apply}{/if}</p>
+  <p class="pageinput">{$hidden}{$submit}{$cancel}<!-- {if isset($apply)}{$apply}{/if} --></p>
 </div>
 
 {if isset($start_tab_headers)}
@@ -282,7 +282,7 @@ jQuery(document).ready(function(){
 
 <div class="pageoverflow">
   <p class="pagetext">&nbsp;</p>
-  <p class="pageinput">{$hidden}{$submit}{$cancel}{if isset($apply)}{$apply}{/if}</p>
+  <p class="pageinput">{$hidden}{$submit}{$cancel}<!-- {if isset($apply)}{$apply}{/if} --></p>
 </div>
 {$endform}
 </div>{* #cgblog_editarticle *}

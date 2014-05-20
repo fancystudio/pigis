@@ -8,11 +8,11 @@
 		<thead>
 			<tr>
 				<th>{$gallerypath}</th>
-				<th class="pagew60">{$dirtag}</th>
-				<th class="pageicon">{$active}</th>			
+				<!-- <th class="pagew60">{$dirtag}</th> -->
+				<!-- <th class="pageicon">{$active}</th> -->			
 				<th class="pageicon">&nbsp;</th>
-				<th class="pageicon">&nbsp;</th>
-				<th class="pageicon"><input id="selectall" type="checkbox" /></th>
+				<!-- <th class="pageicon">&nbsp;</th>
+				<th class="pageicon"><input id="selectall" type="checkbox" /></th> -->
 			</tr>
 		</thead>
 		<tbody>
@@ -23,20 +23,20 @@
 			*}
 			<tr id="node-{$entry->id}"{if !empty($entry->gidclass)} class="{$entry->gidclass|trim}"{/if}>
 				<td class="tfile">{$entry->file}</td>
-				<td class="tfile">{$entry->dirtag}</td>
-				<td class="pagepos" style="text-align:center">{$entry->activelink}</td>			
+				<!-- <td class="tfile">{$entry->dirtag}</td> -->
+				<!-- <td class="pagepos" style="text-align:center">{$entry->activelink}</td> -->			
 				<td class="pagepos" style="text-align:center">{$entry->editlink}</td>
-				<td class="pagepos" style="text-align:center">{$entry->deletelink}</td>
-				<td class="checkbox">{$entry->imgselect}</td>
+				<!-- <td class="pagepos" style="text-align:center">{$entry->deletelink}</td>
+				<td class="checkbox">{$entry->imgselect}</td> -->
 			</tr>
 	{/foreach}
 		</tbody>
 	</table>
-
+<!-- 
 	<div style="margin-top: 0; float: right; text-align: right">
 		{$prompt_multiaction}: {$multiaction}
 	</div>
-
+ -->
 	{$formend}
 
 {else}

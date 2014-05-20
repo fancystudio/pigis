@@ -205,6 +205,7 @@ $headtext .= <<<EOSCRIPT
 <script type="text/javascript">
 // <![CDATA[
 jQuery(document).ready(function(){ 
+	$("#edittabpreview").hide();
   jQuery('[name=cancel]').click(function(){
     var tmp = jQuery(this).val();
     if( tmp == '{$closestr}' )
@@ -356,9 +357,9 @@ $submit_buttons = '<div class="pageoverflow">
  <input type="submit" name="submitbutton" value="'.lang('submit').'" class="pagebutton" title="'.lang('submitdescription').'" />';
 $submit_buttons .= ' <input type="submit" name="cancel" value="'.lang('cancel').'" class="pagebutton" title="'.lang('canceldescription').'" />';
 $submit_buttons .= ' <input type="submit" name="apply" value="'.lang('apply').'" class="pagebutton" title="'.lang('applydescription').'" />';
- if( $contentobj->IsViewable() && $contentobj->Active() ) {
-   $submit_buttons .= ' <a rel="external" href="'.$contentobj->GetURL().'">'.$themeObject->DisplayImage('icons/system/view.gif',lang('view_page'),'','','systemicon').'</a>';
- }
+ //if( $contentobj->IsViewable() && $contentobj->Active() ) {
+   //$submit_buttons .= ' <a rel="external" href="'.$contentobj->GetURL().'">'.$themeObject->DisplayImage('icons/system/view.gif',lang('view_page'),'','','systemicon').'</a>';
+ //}
 $submit_buttons .= '</p></div>';
 
 //echo $submit_buttons;
@@ -379,10 +380,11 @@ $submit_buttons .= '</p></div>';
 			{
 				echo $submit_buttons;
 				?>
-				<div class="pageoverflow">
+				<!-- <div class="pageoverflow">
 					<div class="pagetext"><label for="content_type"><?php echo lang('contenttype'); ?></label>:</div>
 					<div class="pageinput"><?php echo $typesdropdown; ?></div>
 				</div>
+				 -->
 				<?php
 			}
 

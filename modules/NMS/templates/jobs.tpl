@@ -6,11 +6,11 @@
   {/if}
 {/if}
 
-{if isset($jobs_warning)}
+<!--{if isset($jobs_warning)}
   <fieldset class="pageoverflow" style="color:black;padding:5px;background-color:white;border:2px dotted orange">
      {$jobs_warning}
   </fieldset>
-{/if}
+{/if}-->
 
 <p class="pageoverflow">{$itemcount}&nbsp;{$itemsfound}</p>
 

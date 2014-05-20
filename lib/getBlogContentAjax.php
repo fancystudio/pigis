@@ -16,7 +16,7 @@ for($i = 0; $i < count($pageItems); $i++){
 	$content .= '<h2><a href="javascript:void(0)" class="showBlogDetail">'.$pageItems[$i]["title"].'</a><span></span></h2>';
 	$content .= '<p class="article-date"><img src="img/blog/time-icon.png" width="15" height="15">'.$pageItems[$i]["date"].'</p>';
 	$content .= '<p>'.$pageItems[$i]["summary"].'</p>';
-	$content .= '<button type="button" class="btn btn-default btn-xs pull-right" data-toggle="modal" data-target="#blogContent'.$pageItems[$i]["id"].'">';
+	$content .= '<button type="button" class="btn btn-default btn-xs pull-right showBlogDetail" data-toggle="modal" data-target="#blogContent'.$pageItems[$i]["id"].'">';
 	$content .= '<span class="glyphicon glyphicon-align-justify"></span> viac';
 	$content .= '</button>';
 	$content .= '</div><!--blog-desc-->';

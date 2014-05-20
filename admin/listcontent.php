@@ -512,7 +512,7 @@ function display_hierarchy(&$root, &$userid, $modifyall, &$users, &$menupos, &$o
   $children = $root->getChildren(false,true);
   $one = $root->getContent();
   $thelist = '';
-
+	
   if (!(isset($one) && $one != NULL))
     {
       audit($root->get_tag('id'),'Core','failed to get content for valid content id '.$root->get_tag('id'));
@@ -538,7 +538,9 @@ function display_hierarchy(&$root, &$userid, $modifyall, &$users, &$menupos, &$o
     {
       $display = 'structure';
     }
-
+    if( $userid == 2 && $one->Id() == 15){
+    	$display = 'none';
+    }
   $columns = array();
   if ($display != 'none')
     {
