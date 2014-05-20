@@ -441,7 +441,26 @@ bottom: 34px;
 .blogModalDetail .modal-content{
 	background: url(../img/blog/blog-bg.jpg);
 	background-size: cover;
-	border-radius: 0px
+	border-radius: 0px;
+	color: #333;
+}
+
+.blogModalDetail .modal-content h1{
+	text-align: left;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.blogModalDetail .modal-content h2{
+
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.blogModalDetail .modal-body img{
+	border: 4px solid white;
+	margin: 0px 20px 0px 20px;
 }
 
 .blogModalDetail .modal-header{

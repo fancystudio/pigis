@@ -13,7 +13,8 @@ $content .= '<div class="modal-dialog modal-lg"><div class="modal-content">
              
 $content .= '<div class="modal-body">';
 $content .= $pageItems[0]["content"];
-$content .= '</div>';
+$content .= '<div style="clear:both"></div>
+			</div>';
 
 $content .= '<div class="modal-footer">
              <button type="button" class="btn btn-default" data-dismiss="modal">Zavrieť</button>

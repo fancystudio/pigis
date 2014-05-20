@@ -9,7 +9,7 @@ for($i = 0; $i < count($pageItems); $i++){
 	$content .= '<div class="row">';
 	$content .= '<div class="col-md-3 col-md-offset-1 blog-img">';
 	$content .= '<a href="javascript:void(0)" class="thumbnail showBlogDetail">';
-	$content .= '<img src="crop.php?src='.$pageItems[$i]["img"].'&w=485&h=360" alt="'.$pageItems[$i]["title"].'">';
+	$content .= '<img src="crop.php?src='.$pageItems[$i]["img"].'&w=253&h=187" alt="'.$pageItems[$i]["title"].'">';
 	$content .= '</a>';
 	$content .= '</div>';
 	$content .= '<div class="col-md-7 blog-desc article">';
