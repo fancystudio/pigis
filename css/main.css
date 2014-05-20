@@ -63,6 +63,7 @@ a {
 
 #section1{
 	background-image: url(../img/onas-bg.jpg);
+	min-height: 100%;
 	height: auto !important
 }
 
@@ -70,12 +71,15 @@ a {
 	background-image: url(../img/jedalny-bg.jpg);
 	-webkit-transform: translate3d(0,0,0);
 	-webkit-perspective: 0;
+	min-height: 100%;
 	height: auto !important
 	
 }
 
 #section3 {
 	background-image: url(../img/galeria-bg.jpg);
+	min-height: 100%;
+	height: auto;
 }
 
 #section4 {
@@ -430,6 +434,38 @@ bottom: 34px;
 	color: #df3759
 }
 
+.pagination .next {
+	right: -15px;
+}
+
+.blogModalDetail .modal-content{
+	background: url(../img/blog/blog-bg.jpg);
+	background-size: cover;
+	border-radius: 0px
+}
+
+.blogModalDetail .modal-header{
+	text-align: center;
+	border-bottom: 1px dashed #707070;
+}
+
+.blogModalDetail .modal-footer{
+	border-top: 1px dashed #707070;
+}
+
+.blogModalDetail .modal-footer .btn-default {
+	color: #707070;
+	background-color: transparent; 
+	border: 1px dashed #707070;
+}
+
+.blogModalDetail .modal-footer .btn-default:hover {
+	color: #df3759;
+}
+	
+
+
+
 /* ==========================================================================
    fancystudio's galeria
    ========================================================================== */
@@ -483,8 +519,7 @@ bottom: 34px;
 
 div.pagination{
 	position: relative;
-	width: 100%;
-	text-align: center
+	text-align: center;
 }
 
 .pagination.bootpag{
@@ -502,6 +537,10 @@ div.pagination{
 	left: 0px;
 }
 
+li.prev a, li.next a{
+	border-radius: 0px
+}
+
 #fullPage-nav li .active span, .fullPage-slidesNav .active span {
 	background: white;
 	border: white;
@@ -512,15 +551,6 @@ div.pagination{
 
 }
 
-
-
-/*
-	.blog .blog-img{
-	padding-left: 0px;
-	padding-right: 0px;
-}
-	
-*/
 
 /* ==========================================================================
    fancystudio's kontakt
@@ -649,7 +679,12 @@ div.pagination{
 	color: #df3759;
 }
 
-
+.fb-like {
+	margin-top: -23px;
+	margin-left: 19px;
+	bottom: -9px;
+	float: right !important;
+}
 
 
 

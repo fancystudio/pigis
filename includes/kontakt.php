@@ -19,8 +19,11 @@
 Dolná 50, 974 01  Banská Bystrica</p>
 <p>tel. 090 00 00 000, mail: <a href="mailto:pigis@pigis.sk">pigis@pigis.sk</a></p>
 <div class="fb-logo">
-<a href="http://www.facebook.com/Pigis?ref=ts&fref=ts" onclick="window.open(this.href, 'OffSite').focus(); return false;"><img  class="pigis-logo-small" src="img/facebook-logo.png" alt="facebook logo"/></a></div>
+<a href="http://www.facebook.com/Pigis?ref=ts&fref=ts" onclick="window.open(this.href, 'OffSite').focus(); return false;"><img  class="pigis-logo-small" src="img/facebook-logo.png" alt="facebook logo"/></a>
+<div class="fb-like" data-href="https://www.facebook.com/Pigis?fref=ts" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
 </div>
+</div>
+
 
 <div class="col-md-4 col-sm-4 f-box">
 <h3>Newsletter</h3>
