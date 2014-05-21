@@ -65,7 +65,7 @@ function smarty_function_jedalny_listok($params, &$template){
 	
 	
 	</div>
-	<div class="col-md-6 col-md-offset-1">
+	<div class="col-md-7 col-lg-6 col-md-offset-1">
 	<div class="specialita-dna"><div class="inner-content">
 	<h2>špecialita dňa</h2>
 	<h3><?php echo $dayOfWeekSk." ".(($dayOfWeek == 0) ? Date('d.m.Y', strtotime("+1 days")) : date("d.m.Y"))?></h3>

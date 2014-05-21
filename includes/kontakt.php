@@ -65,7 +65,7 @@ Dolná 50, 974 01  Banská Bystrica</p>
 	</tr>
 </table>
 </div>
-<div class="col-md-12">
+<div class="col-md-12" style="clear:both">
 <div class="copyright">
 <p>Copyright pigis.sk © 2014 All rights reserved. Designed &amp; powered by:
 	<a href="http://www.fancystudio.sk" onclick="window.open(this.href, 'OffSite').focus(); return false;"><img src="img/fancy-logo.png"></a>

@@ -37,6 +37,8 @@ html body{
 body{
 	font-size: 14px;
 	font-family: 'PT Sans Narrow', sans-serif;
+	-ms-behavior: url(backgroundsize.min.htc);
+	behavior: url(backgroundsize.min.htc);
 	
 }
 
@@ -55,6 +57,13 @@ a {
 	-o-background-size: cover;
 	background-size: cover;
 	background-position: center center;
+	min-height: 100%;
+	position: relative;
+	z-index: 0;
+	-ms-behavior: url(backgroundsize.min.htc);
+	behavior: url(backgroundsize.min.htc);
+	
+
 }
 
 #section0{
@@ -63,7 +72,6 @@ a {
 
 #section1{
 	background-image: url(../img/onas-bg.jpg);
-	min-height: 100%;
 	height: auto !important
 }
 
@@ -71,20 +79,17 @@ a {
 	background-image: url(../img/jedalny-bg.jpg);
 	-webkit-transform: translate3d(0,0,0);
 	-webkit-perspective: 0;
-	min-height: 100%;
 	height: auto !important
 	
 }
 
 #section3 {
 	background-image: url(../img/galeria-bg.jpg);
-	min-height: 100%;
 	height: auto;
 }
 
 #section4 {
 	background-image: url(../img/nauc-sa-bg.jpg);
-	height: auto !important;
 	min-height: 100%;
 }
 
@@ -325,12 +330,16 @@ a.specialita-dna-news{
 	font-size: 24px
 }
 
+a.specialita-dna-news:hover{
+	text-decoration: none
+}
+
 .specialita-dna-news {
-position: absolute;
-bottom: 0px;
-left: 0px;
-right: 0px;
-bottom: 34px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 34px;
 }
 
 .mail-icon {
@@ -420,7 +429,6 @@ bottom: 34px;
 
 .thumbnail {
 	border-radius: 0px;
-	/*background-color: #e3dadc*/
 }
 
 .blog li a {
@@ -482,7 +490,9 @@ bottom: 34px;
 	color: #df3759;
 }
 	
-
+.img-responsive{
+	width: 100%
+}
 
 
 /* ==========================================================================
@@ -548,12 +558,23 @@ div.pagination{
 
 .pagination .next{
 	position: absolute;
-	right: 0px;
 }
 
 .pagination .prev{
 	position: absolute;
 	left: 0px;
+}
+
+.next.disabled{
+	color: #999;
+}
+
+.prev.disabled{
+	color: #999;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span, .pagination>li:first-child>a, .pagination>li:first-child>span  {
+border-radius: 0px;
 }
 
 li.prev a, li.next a{
@@ -637,8 +658,7 @@ li.prev a, li.next a{
 }
 
 .kontakt .col-md-10{
-	/*background: url(../img/kontakt-bg.png) repeat;*/
-	background: url(../img/blog/article-bg.jpg);
+	background: url(../img/blog/blog-bg.jpg);
 	background-size: cover;
 	position: relative;
 	box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
@@ -721,15 +741,190 @@ li.prev a, li.next a{
 /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
 
+.blog .article {
+	margin-bottom: 15px;
+}
+
+.article-summary{
+	width: 85%;
+	float: left;
+}
+
+.blog .article {
+	min-height: 203px;
+}
+
+.article .btn-xs {
+	position: absolute;
+	bottom: 0px;
+	right: 15px;
+}
+
+.mail-icon {
+margin-bottom: 3px;
+margin-right: 10px;
+width: 33px;
+}
+
+a.specialita-dna-news br {
+	display: none
+}
+
+#section4{
+	min-height: 100% !important;
+	height: auto !important
+}
+
 }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
 
+
+.onas .ikona {
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+.listok img.img-responsive {
+	max-width: 45%;
+	margin: 0 auto;
+}
+
+.jedalny img {
+	margin-top: 3%;
+	margin-bottom: 30px !important;
+}
+
+#section3 h1 {
+	position: static; 
+	top: 0px;
+	margin-left: 0px; 
+	text-align: center;
+}
+
+.table-cell img {
+	margin-top: -125px;
+}
+
+.blog .article {
+	margin-bottom: 15px;
+}
+
+.pagination{
+	width: 100%;
+}
+
+.pagination .next {
+right: -15px;
+}
+
+.article-summary{
+	width: 85%;
+	float: left;
+}
+
+.blog .article {
+	min-height: 188px;
+}
+
+.article .btn-xs {
+	position: absolute;
+	bottom: 0px;
+	right: 15px;
+}
+
+.blog .article p {
+	color: #707070;
+	font-size: 13px;
+	max-height: 73px;
+	overflow: hidden;
+	display: block;
+}
+
+
+#section4{
+	min-height: 100% !important;
+	height: auto !important
+}
+
+
+
+
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+
+.blog .article {
+	margin: 15px
+}
+
+.kontakt-wrapper {
+	position: static;
+	padding-top: 0px;
+	padding-bottom: 0px
+}
+
+#gmap{
+	display: none
+}
+
+.left-ribbon, .right-ribbon, #gmap, .controlArrow{
+	display: none;
+}
+
+.navbar-nav>li {
+	display: block;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border: none;
+	border-color: transparent
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	padding-bottom: 15px
+}
+
+.pagination{
+	width: 100%;
+}
+
+.pagination .next {
+	right: 0px;
+}
+
+.onas .ikona {
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+.listok img.img-responsive {
+	max-width: 60%;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+#section4{
+	min-height: 100% !important;
+	height: auto !important
+}
+
+.kontakt-wrapper {
+	position: static;
+	padding-top: 0px;
+	padding-bottom: 0px
+}
+
+#section5{
+	height: auto !important
+}
+
+#section4{
+	min-height: 100% !important;
+	height: auto !important
+}
 
 }
 
@@ -750,7 +945,13 @@ li.prev a, li.next a{
 }
 
 .kontakt-wrapper {
-	 padding-bottom: 0px; 
+	position: static;
+	padding-top: 0px;
+	padding-bottom: 0px
+}
+
+#gmap{
+	display: none
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
@@ -782,6 +983,34 @@ li.prev a, li.next a{
 
 .blog .btn-xs {
 	float: none !important;
+}
+
+.specialita-dna {
+margin-top: 30px
+display: inline-block;
+position: relative;
+background: url(../img/jedalny-listok/chalkboard.jpg);
+background-size: cover;
+}
+
+a.specialita-dna-news {
+color: #df3759;
+font-size: 18px;
+}
+
+.mail-icon {
+margin-bottom: 9px;
+width: 28px;
+height: auto;
+}
+
+.listok{
+	margin-bottom: 40px
+}
+
+#section4{
+	min-height: 100% !important;
+	height: auto !important
 }
 
 }

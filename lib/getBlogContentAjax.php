@@ -7,19 +7,23 @@ $pageItems = $help->getCurrentBlogPage($_POST["currentPage"],(($_POST["contentHa
 $content = "";
 for($i = 0; $i < count($pageItems); $i++){
 	$content .= '<div class="row">';
-	$content .= '<div class="col-md-3 col-md-offset-1 blog-img">';
+	$content .= '<div class="col-md-10 col-md-offset-1">';
+	$content .= '<div class="row">';
+	$content .= '<div class="col-lg-4 col-md-5 col-sm-5 blog-img">';
 	$content .= '<a href="javascript:void(0)" class="thumbnail showBlogDetail">';
-	$content .= '<img src="crop.php?src='.$pageItems[$i]["img"].'&w=253&h=187" alt="'.$pageItems[$i]["title"].'">';
+	$content .= '<img class="img-responsive" src="crop.php?src='.$pageItems[$i]["img"].'&w=619&h=405" alt="'.$pageItems[$i]["title"].'">';
 	$content .= '</a>';
 	$content .= '</div>';
-	$content .= '<div class="col-md-7 blog-desc article">';
+	$content .= '<div class="col-lg-8 col-md-7 col-sm-7 blog-desc article">';
 	$content .= '<h2><a href="javascript:void(0)" class="showBlogDetail">'.$pageItems[$i]["title"].'</a><span></span></h2>';
 	$content .= '<p class="article-date"><img src="img/blog/time-icon.png" width="15" height="15">'.$pageItems[$i]["date"].'</p>';
-	$content .= '<p>'.$pageItems[$i]["summary"].'</p>';
+	$content .= '<div class="article-summary">'.$pageItems[$i]["summary"].'</div>';
 	$content .= '<button type="button" class="btn btn-default btn-xs pull-right showBlogDetail" data-toggle="modal" data-target="#blogContent'.$pageItems[$i]["id"].'">';
 	$content .= '<span class="glyphicon glyphicon-align-justify"></span> viac';
 	$content .= '</button>';
 	$content .= '</div><!--blog-desc-->';
+	$content .= '</div>';
+	$content .= '</div>';
 	$content .= '</div>';
 }
 $content .= '<script type="text/javascript">';

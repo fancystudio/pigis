@@ -29,7 +29,9 @@ $(document).ready(function() {
 				$(".blogContent .blogThumbs").html(response.content);
 				$('.pagination').bootpag({
 			        total: response.totalPage,
-			        page: response.currentPage
+			        page: response.currentPage,
+			        next: 'staršie »',
+				    prev: '« novšie'
 			    }).on("page", function(event, num){
 			    	$.ajax({
 			    		type: "POST",
