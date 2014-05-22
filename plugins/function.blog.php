@@ -26,6 +26,7 @@ function smarty_function_blog($params, &$template){
 	<div class="blogContent">
 		<div class="blogThumbs"></div>
 		<div class="blogModal"></div>
+		<div class="fb-like" data-href="http://www./pigis/#blogContent2" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 	</div>
 			
 	<div class="pagination col-md-10 col-md-offset-1">
