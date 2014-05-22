@@ -84,6 +84,7 @@ a {
 #section4 {
 	background-image: url(../img/nauc-sa-bg.jpg);
 	min-height: 100%;
+	height: auto !important
 }
 
 
