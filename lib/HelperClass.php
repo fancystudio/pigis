@@ -69,7 +69,7 @@ class Helper
 	}
 	public function getBlogDetail($blogId){
 		$pageItems = array();
-		$select = $this->db->prepare("SELECT cgblog_id, cgblog_title, cgblog_date, cgblog_data, status from cms_module_cgblog mb
+		$select = $this->db->prepare("SELECT cgblog_id, cgblog_title, cgblog_date, summary, cgblog_data, status from cms_module_cgblog mb
 										where cgblog_id = ".$blogId);
 		$select->execute();
 		$blogCount = 0;
@@ -78,6 +78,7 @@ class Helper
 			$pageItems[$blogCount]["title"] = $row->cgblog_title;
 			$pageItems[$blogCount]["date"] = date("d.m.Y h:i:s", strtotime($row->cgblog_date));
 			$pageItems[$blogCount]["content"] = $row->cgblog_data;
+			$pageItems[$blogCount]["summary"] = $this->truncate($row->summary, 450);
 			$pageItems[$blogCount]["status"] = $row->status;
 			$blogCount++;
 		}
@@ -86,8 +87,10 @@ class Helper
 	public function insertMailToNewsletter($mail){
 		try{
 			$insert = $this->db->prepare("INSERT INTO cms_module_nms_users (uniqueid, email, username, disabled, confirmed, htmlemail, dateadded, dateconfirmed, error_count, bounce_count) VALUES (?,?,?,?,?,?,?,?,?,?)");
-			$insert->execute(array(md5(uniqid(rand(),1)), $mail,"", 0, 0, 1, date("Y-m-d H:i:s"), null, null, null));
-			return true;		
+			$insert->execute(array(md5(uniqid(rand(),1)), $mail,"guest", 0, 1, 1, date("Y-m-d H:i:s"), null, null, null));
+			$insert = $this->db->prepare("INSERT INTO cms_module_nms_listuser (userid, listid, active, entered) VALUES (?,?,?,?)");
+			$insert->execute(array($this->db->lastInsertId(), 1, 1, date("Y-m-d H:i:s")));
+			return true;
 		}catch(Exception $e) {
 			return false;
 		}

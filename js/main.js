@@ -119,7 +119,7 @@ function loadBlogDetailAndShow(hashTag, typeOfRequest){
 function newsletterSend() {
 	$(".newsletterButton").click(function(){
 		var $infoPanel = $(this).siblings(".sendNewsletterStatus");
-		$infoPanel.html("").removeClass("alert").removeClass("alert-success");
+		$infoPanel.html("").removeClass("alert").removeClass("alert-success").removeClass("alert-danger");
 		if(isValidEmailAddress($(".newsletterEmail").val(),$infoPanel)){
 			$.ajax({
 				type: "POST",

@@ -47,7 +47,6 @@ function smarty_function_jedalny_listok_nms($params, &$template){
 		$weekDayContent = $weekDay["content"];
 	}
 	?>
-	<h2>špecialita dňa</h2>
 	<h3><?php echo $dayOfWeekSk." ".(($dayOfWeek == 0) ? Date('d.m.Y', strtotime("+1 days")) : date("d.m.Y"))?></h3>
 	<?php 
 		echo $weekDayContent;
