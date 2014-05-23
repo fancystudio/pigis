@@ -48,6 +48,27 @@ h3, .h3 {
 
 a {
    outline: 0 !important;
+   color: #434444\9;
+}
+
+a:hover{
+	color: #df3759\9;
+}
+
+.collapse.navbar-collapse{
+	position: absolute\9;
+	z-index: 9\9;
+	top: 30px\9;
+	left: 50%\9;
+	margin-left: -357px\9 !important;
+}
+
+.container > .navba-collapse{
+	
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+	background-color: transparent !important;
 }
 
 #section0, #section1, #section2, #section3, #section4, #section5{
@@ -57,23 +78,28 @@ a {
 	background-size: cover;
 	background-position: center center;
 	min-height: 100%;
+	-ms-behavior: url(backgroundsize.min.htc);
 }
 
 #section0{
-	background-image: url(../img/home-bg.jpg);
+	background-image: url(../img/home-bg.jpg); 
+	
+/*
+	-pie-background: url(../img/home-bg.jpg) no-repeat 0 0 / cover;
+	behavior: url(../pie/PIE.htc);
+*/
 }
 
 #section1{
 	background-image: url(../img/onas-bg.jpg);
-	height: auto !important
+	height: auto !important;
 }
 
 #section2{
 	background-image: url(../img/jedalny-bg.jpg);
 	-webkit-transform: translate3d(0,0,0);
 	-webkit-perspective: 0;
-	height: auto !important
-	
+	height: auto !important;	
 }
 
 #section3 {
@@ -84,7 +110,7 @@ a {
 #section4 {
 	background-image: url(../img/nauc-sa-bg.jpg);
 	min-height: 100%;
-	height: auto !important
+	height: auto !important;
 }
 
 
@@ -136,6 +162,7 @@ a {
 	-o-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
 	box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
 	margin-top: 5%;
+	behavior: url(../pie/PIE.htc);
 }
 
 .navbar-nav>li>a {
