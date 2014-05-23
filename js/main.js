@@ -104,6 +104,7 @@ function loadBlogDetailAndShow(hashTag, typeOfRequest){
 						$.fn.fullpage.setAutoScrolling(false);
 						$.fn.fullpage.setAllowScrolling(true);
 					});
+					FB.XFBML.parse(); 
 				}else{
 					alert("Nepodarilo sa nacitat blog detail");
 				}     
