@@ -4,7 +4,10 @@ require_once '../config.php';
 $pageItems = array();
 $help = new Helper($config);
 $pageItems = $help->getBlogDetail($_POST["blogId"]);
-$content = '<div class="modal fade blogModalDetail" id="blogContent'.$pageItems[0]["id"].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
+$content = '<meta property="og:title" content="'.$pageItems[0]["title"].'" />';
+$content .= '<meta property="og:url" content="http://test.pigis.sk/#blogContent'.$pageItems[0]["id"].'" />';
+$content .= '<div class="fb-like" data-href="http://test.pigis.sk/#blogContent'.$pageItems[0]["id"].'" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>';
+$content .= '<div class="modal fade blogModalDetail" id="blogContent'.$pageItems[0]["id"].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
 
 $content .= '<div class="modal-dialog modal-lg"><div class="modal-content">
              <div class="modal-header"><img src="img/blog/logo-det.png"/>

@@ -13,9 +13,8 @@ $(document).ready(function() {
 	hashTag = window.location.hash;
 	isHashFromBlog = isHashFromBlog(hashTag);
 	if(isHashFromBlog){
-			loadBlogDetailAndShow(window.location.hash, "pageInit");
+		loadBlogDetailAndShow(window.location.hash, "pageInit");
 	}
-	
 	$.ajax({
 		type: "POST",
 		url: "lib/getBlogContentAjax.php",
@@ -64,6 +63,7 @@ $(document).ready(function() {
 		}
 	});
 	newsletterSend();
+	googleMapinitialize();
 });
 function isHashFromBlog(hashTag){
 	if(hashTag != "#domov"
@@ -97,6 +97,13 @@ function loadBlogDetailAndShow(hashTag, typeOfRequest){
     			if(response.status == "success"){
     				$(".blogContent .blogModal").html(response.content);
 					$(hashTag).modal('show');
+					$.fn.fullpage.setAutoScrolling(true);
+					$.fn.fullpage.setAllowScrolling(false);
+					$(hashTag).on('hidden.bs.modal', function (e) {
+						window.location.hash = 'nauc-sa-chefovat';
+						$.fn.fullpage.setAutoScrolling(false);
+						$.fn.fullpage.setAllowScrolling(true);
+					});
 				}else{
 					alert("Nepodarilo sa nacitat blog detail");
 				}     
@@ -152,7 +159,7 @@ function isNumber(value) {
     return !isNaN(value - 0);
 }
 var map;
-function initialize() {        
+function googleMapinitialize() {        
 var styles = [
     {
         "featureType": "water",
@@ -327,38 +334,37 @@ var styles = [
             }
         ]
     }
-];
-
-
-var options = {
-scrollwheel: false,
-navigationControl: false,
-    mapTypeControl: false,
-    scaleControl: false,
-    draggable: true,
-	mapTypeControlOptions: {
-		mapTypeIds: [ 'Styled']
-	},
-	center: new google.maps.LatLng(48.73289, 19.14155),
-	zoom: 17,
-	mapTypeId: 'Styled',
-
-};
-
-var div = document.getElementById('gmap');
-var map = new google.maps.Map(div, options);
-var myLatlng = new google.maps.LatLng(48.73389, 19.14155);
-var image = 'img/marker.png';
-var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'pigis',
-      icon: image
-  });
-
-var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
-map.mapTypes.set('Styled', styledMapType);}
-google.maps.event.addDomListener(window, 'load', initialize);
+	];
+	
+	var options = {
+	scrollwheel: false,
+	navigationControl: false,
+	    mapTypeControl: false,
+	    scaleControl: false,
+	    draggable: true,
+		mapTypeControlOptions: {
+			mapTypeIds: [ 'Styled']
+		},
+		center: new google.maps.LatLng(48.73289, 19.14155),
+		zoom: 17,
+		mapTypeId: 'Styled',
+	
+	};
+	
+	var div = document.getElementById('gmap');
+	var map = new google.maps.Map(div, options);
+	var myLatlng = new google.maps.LatLng(48.73389, 19.14155);
+	var image = 'img/marker.png';
+	var marker = new google.maps.Marker({
+	  position: myLatlng,
+	  map: map,
+	  title: 'pigis',
+	  icon: image
+	});
+	
+	var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
+	map.mapTypes.set('Styled', styledMapType);
+}
 
 
 
