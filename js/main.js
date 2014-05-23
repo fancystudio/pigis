@@ -20,7 +20,7 @@ $(document).ready(function() {
 		url: "lib/getBlogContentAjax.php",
 		data: {
 			currentPage : 1,
-			contentHashId : (isHashFromBlog ? hashTag.substr(12) : "")
+			contentHashId : (isHashFromBlog ? hashTag.substr(18) : "")
 		},
 		beforeSend: function(){},
 		success: function(response){
@@ -72,8 +72,8 @@ function isHashFromBlog(hashTag){
 		&& hashTag != "#galeria"
 		&& hashTag != "#nauc-sa-chefovat"
 		&& hashTag != "#kontakt"
-		&& hashTag.substr(0, 12) == "#blogContent" 
-		&& isNumber(hashTag.substr(12))
+		&& hashTag.substr(0, 18) == "#nauc-sa-chefovat-" 
+		&& isNumber(hashTag.substr(18))
 		){
 		return true;
 	}else{
@@ -81,8 +81,9 @@ function isHashFromBlog(hashTag){
 	}
 }
 function loadBlogDetailAndShow(hashTag, typeOfRequest){
-	if(hashTag.substr(0, 12) == "#blogContent" && isNumber(hashTag.substr(12))){
-		blogId = hashTag.substr(12);
+	if(hashTag.substr(0, 18) == "#nauc-sa-chefovat-" && isNumber(hashTag.substr(18))){
+		blogId = hashTag.substr(18);
+		console.log(hashTag);
 		if(typeOfRequest == "pageInit"){
 			$.fn.fullpage.moveTo(5); //slajd na blog sekciu
 		}
