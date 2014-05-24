@@ -83,11 +83,6 @@ a:hover{
 
 #section0{
 	background-image: url(../img/home-bg.jpg); 
-	
-/*
-	-pie-background: url(../img/home-bg.jpg) no-repeat 0 0 / cover;
-	behavior: url(../pie/PIE.htc);
-*/
 }
 
 #section1{
@@ -163,6 +158,20 @@ a:hover{
 	box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
 	margin-top: 5%;
 	behavior: url(../pie/PIE.htc);
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background-color: #df3759;
+}
+
+.navbar-toggle {
+background-color: #df3759;
+border: 1px solid white;
+
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+background-color: white;
 }
 
 .navbar-nav>li>a {
@@ -748,16 +757,17 @@ li.prev a, li.next a{
 
 
 .modal-footer .fb-like{
-	float: left;
+	float: left !important;
+	margin-top: 0px !important;
 }
 
 .alert {
-padding: 5px;
-margin-bottom: 20px;
-border: 1px solid transparent;
-border-radius: 4px;
-text-align: center;
-margin-top: 10px;
+	padding: 5px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-align: center;
+	margin-top: 10px;
 }
 
 
@@ -882,13 +892,92 @@ right: -15px;
 	height: auto !important
 }
 
+}
 
+/* ipad na sirku */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+
+
+#section0{
+	background-image: url(../img/1024-landscape/home-bg.jpg); 
+}
+
+#section1{
+	background-image: url(../img/1024-landscape/onas-bg.jpg);
+}
+
+#section2{
+	background-image: url(../img/1024-landscape/jedalny-bg.jpg);	
+}
+
+#section3 {
+	background-image: url(../img/1024-landscape/galeria-bg.jpg);
+}
+
+#section4 {
+	background-image: url(../img/1024-landscape/nauc-sa-bg.jpg);
+}
 
 
 }
 
+/* ipad na vysku */
+
+@media only screen 
+and (min-device-width : 300px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+
+#section0{
+	background-image: url(../img/portait/home-bg.jpg); 
+}
+
+#section1{
+	background-image: url(../img/portait/onas-bg.jpg);
+}
+
+#section2{
+	background-image: url(../img/portait/jedalny-bg.jpg);	
+}
+
+#section3 {
+	background-image: url(../img/portait/galeria-bg.jpg);
+}
+
+#section4 {
+	background-image: url(../img/portait/nauc-sa-bg.jpg);
+}
+
+
+ }
+
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+
+#section0{
+	background-image: url(../img/portait/home-bg.jpg); 
+}
+
+#section1{
+	background-image: url(../img/portait/onas-bg.jpg);
+}
+
+#section2{
+	background-image: url(../img/portait/jedalny-bg.jpg);	
+}
+
+#section3 {
+	background-image: url(../img/portait/galeria-bg.jpg);
+}
+
+#section4 {
+	background-image: url(../img/portait/nauc-sa-bg.jpg);
+}
+
 
 .blog .article {
 	margin: 15px
@@ -964,6 +1053,9 @@ right: -15px;
 
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
+
+
+
 
 .left-ribbon, .right-ribbon, #gmap, .controlArrow{
 	display: none;
@@ -1047,4 +1139,39 @@ height: auto;
 	height: auto !important
 }
 
+div.fb-like.fb_iframe_widget.fb_iframe_widget_fluid{
+	width: auto !important
+}
+
+.kontakt-wrapper{
+	padding-bottom: 0px !important
+}
+
+}
+
+
+
+
+
+
+
+
+
+/* media na vysku */
+
+@media (max-height: 750px) {
+	
+
+#section3 h1 {
+display: none
+}
+	
+.kontakt-wrapper {
+	padding-bottom: 25px;
+}
+
+.hlavna-navigacia {
+	margin-top: 2%;
+}
+	
 }

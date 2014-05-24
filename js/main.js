@@ -338,16 +338,18 @@ var styles = [
     }
 	];
 	
+	var isDraggable = $(document).width() > 720 ? true : false; // zisti ci je mobil
+	
 	var options = {
 	scrollwheel: false,
 	navigationControl: false,
 	    mapTypeControl: false,
 	    scaleControl: false,
-	    draggable: true,
+	    draggable: isDraggable,
 		mapTypeControlOptions: {
 			mapTypeIds: [ 'Styled']
 		},
-		center: new google.maps.LatLng(48.73289, 19.14155),
+		center: new google.maps.LatLng(48.73189, 19.14155),
 		zoom: 17,
 		mapTypeId: 'Styled',
 	
@@ -355,7 +357,7 @@ var styles = [
 	
 	var div = document.getElementById('gmap');
 	var map = new google.maps.Map(div, options);
-	var myLatlng = new google.maps.LatLng(48.73389, 19.14155);
+	var myLatlng = new google.maps.LatLng(48.732891, 19.141550);
 	var image = 'img/marker.png';
 	var marker = new google.maps.Marker({
 	  position: myLatlng,
