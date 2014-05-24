@@ -20,8 +20,8 @@ $content .= '<div style="clear:both"></div>
 			</div>';
 
 $content .= '<div class="modal-footer">
-			 <div class="fb-like" data-href="http://test.pigis.sk/#nauc-sa-chefovat-'.$pageItems[0]["id"].'" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
-             <button type="button" class="btn btn-default" data-dismiss="modal">Zavrieť</button>
+             <div class="fb-like" data-href="'.$_SERVER['HTTP_HOST'].'/#nauc-sa-chefovat-'.$pageItems[0]["id"].'" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+			 <button type="button" class="btn btn-default" data-dismiss="modal">Zavrieť</button>   
              </div>';
 
 $content .= '</div>
