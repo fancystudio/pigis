@@ -5,6 +5,7 @@ $(document).ready(function() {
 		'scrollOverflow': false,
 		menu: '#menu',
 		paddingTop: '7%',
+		scrollingSpeed: 900,
 		keyboardScrolling: true,
 		slidesNavigation: true,	
 		resize: false,
@@ -63,7 +64,7 @@ $(document).ready(function() {
 		}
 	});
 	newsletterSend();
-	googleMapinitialize();
+	//googleMapinitialize();
 });
 function isHashFromBlog(hashTag){
 	if(hashTag != "#domov"
@@ -369,7 +370,7 @@ var styles = [
 	var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
 	map.mapTypes.set('Styled', styledMapType);
 }
-
+google.maps.event.addDomListener(window, 'load', googleMapinitialize);
 
 
 
