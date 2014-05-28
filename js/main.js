@@ -347,9 +347,7 @@ var styles = [
 	    mapTypeControl: false,
 	    scaleControl: false,
 	    draggable: isDraggable,
-		mapTypeControlOptions: {
-			mapTypeIds: [ 'Styled']
-		},
+		mapTypeControlOptions: { mapTypeIds: [ 'Styled']},
 		center: new google.maps.LatLng(48.73189, 19.14155),
 		zoom: 17,
 		mapTypeId: 'Styled',
