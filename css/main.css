@@ -98,7 +98,7 @@ a:hover{
 }
 
 #section3 {
-/*	background-image: url(../img/galeria-bg.jpg);*/
+	background-image: url(../img/galeria-bg.jpg);
 	height: auto;
 }
 
@@ -914,7 +914,7 @@ and (orientation : portrait) {
 }
 
 #section3 {
-	/*background-image: url(../img/1024-landscape/galeria-bg.jpg);*/
+	background-image: url(../img/1024-landscape/galeria-bg.jpg);
 }
 
 #section4 {
@@ -944,7 +944,7 @@ and (orientation : portrait) {
 }
 
 #section3 {
-	/*background-image: url(../img/portait/galeria-bg.jpg);*/
+	background-image: url(../img/portait/galeria-bg.jpg);
 }
 
 #section4 {
@@ -971,7 +971,7 @@ and (orientation : portrait) {
 }
 
 #section3 {
-	/*background-image: url(../img/portait/galeria-bg.jpg);*/
+	background-image: url(../img/portait/galeria-bg.jpg);
 }
 
 #section4 {
