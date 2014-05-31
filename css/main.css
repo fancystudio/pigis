@@ -1,0 +1,1177 @@
+
+
+/* ==========================================================================
+   fancystudio's custom styles
+   ========================================================================== */
+
+
+@font-face {
+    font-family: 'sansita_oneregular';
+    src: url('../fonts/sansitaone-webfont.eot');
+    src: url('../fonts/sansitaone-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sansitaone-webfont.woff') format('woff'),
+         url('../fonts/sansitaone-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dk_crayon_crumbleregular';
+    src: url('../fonts/crayon_crumble-webfont.eot');
+    src: url('../fonts/crayon_crumble-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/crayon_crumble-webfont.woff') format('woff'),
+         url('../fonts/crayon_crumble-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
+html body{
+	height: 100%;
+	max-width: 100%;
+	overflow-x: hidden !important
+}
+
+body{
+	font-size: 14px;
+	font-family: 'PT Sans Narrow', sans-serif;
+
+	
+}
+
+h3, .h3 {
+	font-size: 17px;
+	font-weight: 400;
+}
+
+a {
+   outline: 0 !important;
+   color: #434444\9;
+}
+
+a:hover{
+	color: #df3759\9;
+}
+
+.collapse.navbar-collapse{
+	position: absolute\9;
+	z-index: 9\9;
+	top: 30px\9;
+	left: 50%\9;
+	margin-left: -357px\9 !important;
+}
+
+.container > .navba-collapse{
+	
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+	background-color: transparent !important;
+}
+
+#section0, #section1, #section2, #section3, #section4, #section5{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	min-height: 100%;
+	-ms-behavior: url(backgroundsize.min.htc);
+}
+
+#section0{
+	background-image: url(../img/home-bg.jpg); 
+}
+
+#section1{
+	background-image: url(../img/onas-bg.jpg);
+	height: auto !important;
+}
+
+#section2{
+	background-image: url(../img/jedalny-bg.jpg);
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-perspective: 0;
+	height: auto !important;	
+}
+
+#section3 {
+	background-image: url(../img/galeria-bg.jpg);
+	height: auto;
+}
+
+#section4 {
+	background-image: url(../img/nauc-sa-bg.jpg);
+	min-height: 100%;
+	height: auto !important;
+}
+
+
+
+/* ==========================================================================
+   fancystudio's navigácia
+   ========================================================================== */
+
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.nav{
+	font-family: sansita_oneregular;
+	color: #434444;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .active, li.active {
+	color: #df3759 !important;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: #df3759;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #434444;
+	font-size: 17px;
+}
+
+.hlavna-navigacia{
+	background: url(../img/menu/menu-bg.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	float: none !important;
+	margin: 0 auto;
+	max-width: 735px;
+	text-align: center;
+	position: relative;
+	box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-webkit-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-moz-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-ms-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-o-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	margin-top: 5%;
+	behavior: url(../pie/PIE.htc);
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background-color: #df3759;
+}
+
+.navbar-toggle {
+background-color: #df3759;
+border: 1px solid white;
+
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+background-color: white;
+}
+
+.navbar-nav>li>a {
+	padding: 15px 20px 15px 20px;
+}
+
+.navbar-nav>li {
+	display: inline-block;
+	float: none;
+}
+
+
+.top-strip, .bottom-strip, .left-strip, .right-strip {
+	position: absolute
+}
+
+.top-strip{
+	background: url(../img/menu/tb-strip.png) repeat-x;
+	display: block;
+	height: 2px;
+	top: 6px;
+	left: 10px;
+	right: 10px;
+}
+
+.bottom-strip{
+	background: url(../img/menu/tb-strip.png) repeat-x;
+	display: block;
+	height: 2px;
+	bottom: 6px;
+	left: 10px;
+	right: 10px;
+}
+
+.left-strip{
+	background: url(../img/menu/lr-strip.png) repeat-y;
+	display: block;
+	width: 2px;
+	top: 6px;
+	bottom: 6px;
+	left: 10px;
+}
+
+.right-strip{
+	background: url(../img/menu/lr-strip.png) repeat-y;
+	display: block;
+	width: 2px;
+	top: 6px;
+	bottom: 6px;
+	right: 10px;
+}
+
+.left-ribbon{
+	display: block;
+	width: 100px;
+	height: 63px;
+	background: url(../img/menu/left-ribbon.png) no-repeat;
+	position: absolute;
+	left: -53px;
+	bottom: -23px;
+	z-index: -1;
+}
+
+.right-ribbon{
+	display: block;
+	width: 100px;
+	height: 63px;
+	background: url(../img/menu/right-ribbon.png) no-repeat;
+	position: absolute;
+	right: -53px;
+	bottom: -23px;
+	z-index: -1;
+}
+
+/* ==========================================================================
+   fancystudio's content
+   ========================================================================== */
+
+.content{
+	margin-top: 2%;
+	color: white;
+	font-size: 16px;
+	text-align: center
+}
+
+.content h1 img{
+	padding-bottom: 35px;
+}
+
+.onas h3{
+	font-size: 18px;
+	line-height: 28px;
+	text-transform: uppercase
+}
+
+.onas .ikona {
+	padding-bottom: 100px;
+	padding-top: 100px;
+}
+
+.jedalny img{
+	-webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;   
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;  
+    overflow:hidden;
+    margin-top: 50%;
+}
+
+
+
+.jedalny img:hover{
+	-webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+
+.jedalny-items {
+	height: 100%;
+	position: relative;
+	width: 100%;
+	display: block;
+	float: left;
+	margin-top: 4%;
+	padding-bottom: 10%;
+	font-family: dk_crayon_crumbleregular;
+}
+
+.listok img.img-responsive{
+	max-width: 110%
+}
+
+.specialita-dna{
+	display: inline-block;
+	position: relative;
+}
+
+
+.specialita-dna .inner-content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 6%;
+}
+
+.inner-content p {
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.inner-content h2 {
+	text-transform: uppercase;
+	font-size: 36px;
+}
+
+.inner-content h3{
+	font-size: 20px;
+	padding-bottom: 15px;
+}
+
+#section2 .modal-body{
+	height: 80%
+}
+
+div#modlanews{
+	top:50%;
+	margin-top: -120px
+}
+
+#modlanews .modal-content{
+	border-radius: 0px;
+	background: url(../img/blog/article-bg.jpg);
+	background-size: cover;
+	position: relative;
+}
+
+a.specialita-dna-news{
+	color: #df3759;
+	font-size: 24px
+}
+
+a.specialita-dna-news:hover{
+	text-decoration: none
+}
+
+.specialita-dna-news {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 34px;
+}
+
+.mail-icon {
+	margin-bottom: 20px;
+}
+
+#myModal .modal-lg{
+	height: 92%;
+}
+
+#myModal .modal-lg .modal-content{
+	height: 100%;
+}
+
+#myModal .modal-lg .modal-content{
+	height: 100%;
+}
+
+#myModal .modal-lg .modal-content .modal-body{
+	height: 90%;
+}
+
+/* ==========================================================================
+   fancystudio's nauč sa chefovať
+   ========================================================================== */
+
+.container.blog{
+	padding-top: 30px
+}
+
+.blog h1{
+	text-align: center;
+	margin-top: 0px
+}
+
+.blog .article{
+	background: url(../img/blog/article-bg.jpg);
+	background-size: cover;
+	min-height: 195px
+}
+
+.blog .article h2{
+	margin-top: 10px;
+	line-height: 1.4;
+}
+
+.blog .article h2 a{
+	color: #4b7d83;
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 24px;
+	margin-top: -5px;
+}
+
+.blog .article h2 span{
+	width: 100%;
+	height: 1px;
+	display: block;
+	background: url(../img/blog/dashed.png) repeat-x;
+}
+
+.blog .article p {
+	color: #707070;
+	font-size: 13px;
+}
+
+.blog .article-date{
+	color: #cf4362 !important;
+	font-size: 10px;
+}
+
+.blog .article-date img{
+	margin-right: 10px
+}
+
+.blog .btn-xs {
+	background-color: #cf4362;
+	color: white;
+	border: none;
+	padding: 4px 10px;
+	margin-bottom: 15px;
+}
+
+.blog .btn-xs:hover {
+	background-color: #aa3a53;
+}
+
+.thumbnail {
+	border-radius: 0px;
+}
+
+.blog li a {
+	margin: 2px;
+	color: #434444;
+	background: url(../img/blog/article-bg.jpg);
+	background-size: cover;
+}
+
+.blog li.disabled a{
+	color: #df3759
+}
+
+.pagination .next {
+	right: -15px;
+}
+
+.blogModalDetail .modal-content{
+	background: url(../img/blog/blog-bg.jpg);
+	background-size: cover;
+	border-radius: 0px;
+	color: #333;
+}
+
+.blogModalDetail .modal-content h1{
+	text-align: left;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.blogModalDetail .modal-content h2{
+
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.blogModalDetail .modal-body img{
+	border: 4px solid white;
+	margin: 0px 20px 0px 20px;
+}
+
+.blogModalDetail .modal-header{
+	text-align: center;
+	border-bottom: 1px dashed #707070;
+}
+
+.blogModalDetail .modal-footer{
+	border-top: 1px dashed #707070;
+}
+
+.blogModalDetail .modal-footer .btn-default {
+	color: #707070;
+	background-color: transparent; 
+	border: 1px dashed #707070;
+}
+
+.blogModalDetail .modal-footer .btn-default:hover {
+	color: #df3759;
+}
+	
+.img-responsive{
+	width: 100%
+}
+
+
+/* ==========================================================================
+   fancystudio's galeria
+   ========================================================================== */
+
+.slidesContainer{
+	text-align: center;
+}
+
+.galeria{
+	height: 100%
+}
+
+.controlArrow {
+	top: 52%;
+}
+
+.slide{
+	display: table;
+}
+
+.slides{
+	width: 100%
+}
+
+.table-cell{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.table-cell img {
+	max-width: 100%;
+	height: auto;
+	border: solid white 7px;
+}
+
+#section3 h1 {
+	position: absolute;
+	top: 130px;
+	left: 50%;
+	margin-left: -75px;
+}
+
+.fullPage-slidesNav.bottom {
+	bottom: 17px;
+	width: 100%;
+	text-align: center;
+	left: 0px;
+	right: 0px;
+	margin-left: auto !important
+}
+
+div.pagination{
+	position: relative;
+	text-align: center;
+}
+
+.pagination.bootpag{
+	text-align: center;
+	width: auto;
+}
+
+.pagination .next{
+	position: absolute;
+}
+
+.pagination .prev{
+	position: absolute;
+	left: 0px;
+}
+
+.next.disabled{
+	color: #999;
+}
+
+.prev.disabled{
+	color: #999;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span, .pagination>li:first-child>a, .pagination>li:first-child>span  {
+border-radius: 0px;
+}
+
+li.prev a, li.next a{
+	border-radius: 0px
+}
+
+#fullPage-nav li .active span, .fullPage-slidesNav .active span {
+	background: white;
+	border: white;
+}
+
+#fullPage-nav span, .fullPage-slidesNav span {
+	border: 1px solid #FFF;
+
+}
+
+
+/* ==========================================================================
+   fancystudio's kontakt
+   ========================================================================== */
+
+#section5{
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+#gmap{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.kontakt-wrapper{
+	color: #434444;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	bottom: 0px;
+	/*background: url(../img/kontakt-bg.png) repeat;*/
+	padding-top: 25px;
+	padding-bottom: 100px;
+}
+
+.kontakt h3{
+	text-transform: uppercase;
+	border-bottom: 1px solid #434444;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+}
+
+.kontakt table{
+	width: 100%;
+}
+
+.kontakt table tr td{
+	padding: 3px 0px
+}
+
+.newsletterEmail {
+	background: transparent;
+	border-radius: 0px;
+	border: solid #434444 2px;
+	padding: 22px;
+	color: #434444;
+	text-align: center;
+}
+
+.newsletterButton {
+	width: 100%;
+	border-radius: 0px;
+	border: 2px solid #434444;
+	background: #434444;
+	margin-top: 20px;
+	color: #d1d1d1;
+	padding: 10px 0px;
+}
+
+.newsletterButton:hover {
+	background: transparent;
+	color: #434444;
+}
+
+.kontakt .col-md-10{
+	background: url(../img/blog/blog-bg.jpg);
+	background-size: cover;
+	position: relative;
+	box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-webkit-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-moz-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-ms-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	-o-box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+	box-shadow: 3px 4px 13px 0px rgba(0, 0, 0, 0.56);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+	color: #434444;
+	background-color: transparent;
+	border-color: #434444;
+}
+
+.form-control:focus {
+	border-color: #434444;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(230,115,128,.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(230,115,128,.6);
+}
+
+.kontakt-inner{
+	padding: 20px 35px;
+}
+
+.hodiny{
+	text-align: right;
+}
+
+.fb-logo {
+	width: 100%;
+	border-top: 1px solid #434444;
+	padding-top: 30px;
+	margin-top: 22px;
+	display: block;
+}
+
+.pigis-logo-small {
+	padding-bottom: 10px;
+	margin-top: -10px;
+}
+
+.news-p {
+	padding-top: 10px;
+}
+
+.copyright {
+	border-top: dashed 1px black;
+	padding: 25px 0px 0px 0px;
+	color: #434444;
+	text-align: center;
+}
+
+.kontakt a{
+	color: #df3759;
+}
+
+.kontakt-inner .fb-like {
+	margin-top: -23px;
+	margin-left: 19px;
+	bottom: -9px;
+	float: right !important;
+}
+
+
+.modal-footer .fb-like{
+	float: left !important;
+	margin-top: 0px !important;
+}
+
+.alert {
+	padding: 5px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+
+
+/* ==========================================================================
+   responsibilita
+   ========================================================================== */
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+.blog .article {
+	margin-bottom: 15px;
+}
+
+.article-summary{
+	width: 85%;
+	float: left;
+}
+
+.blog .article {
+	min-height: 203px;
+}
+
+.article .btn-xs {
+	position: absolute;
+	bottom: 0px;
+	right: 15px;
+}
+
+.mail-icon {
+margin-bottom: 3px;
+margin-right: 10px;
+width: 33px;
+}
+
+a.specialita-dna-news br {
+	display: none
+}
+
+#section4{
+	min-height: 100% !important;
+	height: auto !important
+}
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+.onas .ikona {
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+.listok img.img-responsive {
+	max-width: 45%;
+	margin: 0 auto;
+}
+
+.jedalny img {
+	margin-top: 3%;
+	margin-bottom: 30px !important;
+}
+
+#section3 h1 {
+	position: static; 
+	top: 0px;
+	margin-left: 0px; 
+	text-align: center;
+}
+
+.table-cell img {
+	margin-top: -125px;
+}
+
+.blog .article {
+	margin-bottom: 15px;
+}
+
+.pagination{
+	width: 100%;
+}
+
+.pagination .next {
+right: -15px;
+}
+
+.article-summary{
+	width: 85%;
+	float: left;
+}
+
+.blog .article {
+	min-height: 188px;
+}
+
+.article .btn-xs {
+	position: absolute;
+	bottom: 0px;
+	right: 15px;
+}
+
+.blog .article p {
+	color: #707070;
+	font-size: 13px;
+	max-height: 73px;
+	overflow: hidden;
+	display: block;
+}
+
+
+#section4{
+	min-height: 100% !important;
+	height: auto !important
+}
+
+}
+
+/* ipad na sirku */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+
+
+#section0{
+	background-image: url(../img/1024-landscape/home-bg.jpg); 
+}
+
+#section1{
+	background-image: url(../img/1024-landscape/onas-bg.jpg);
+}
+
+#section2{
+	background-image: url(../img/1024-landscape/jedalny-bg.jpg);	
+}
+
+#section3 {
+	background-image: url(../img/1024-landscape/galeria-bg.jpg);
+}
+
+#section4 {
+	background-image: url(../img/1024-landscape/nauc-sa-bg.jpg);
+}
+
+
+}
+
+/* ipad na vysku */
+
+@media only screen 
+and (min-device-width : 300px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+
+#section0{
+	background-image: url(../img/portait/home-bg.jpg); 
+}
+
+#section1{
+	background-image: url(../img/portait/onas-bg.jpg);
+}
+
+#section2{
+	background-image: url(../img/portait/jedalny-bg.jpg);	
+}
+
+#section3 {
+	background-image: url(../img/portait/galeria-bg.jpg);
+}
+
+#section4 {
+	background-image: url(../img/portait/nauc-sa-bg.jpg);
+}
+
+
+ }
+
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+#section0{
+	background-image: url(../img/portait/home-bg.jpg); 
+}
+
+#section1{
+	background-image: url(../img/portait/onas-bg.jpg);
+}
+
+#section2{
+	background-image: url(../img/portait/jedalny-bg.jpg);	
+}
+
+#section3 {
+	background-image: url(../img/portait/galeria-bg.jpg);
+}
+
+#section4 {
+	background-image: url(../img/portait/nauc-sa-bg.jpg);
+}
+
+
+.blog .article {
+	margin: 15px
+}
+
+.kontakt-wrapper {
+	position: static;
+	padding-top: 0px;
+	padding-bottom: 0px
+}
+
+#gmap{
+	display: none
+}
+
+.left-ribbon, .right-ribbon, #gmap, .controlArrow{
+	display: none;
+}
+
+.navbar-nav>li {
+	display: block;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border: none;
+	border-color: transparent
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	padding-bottom: 15px
+}
+
+.pagination{
+	width: 100%;
+}
+
+.pagination .next {
+	right: 0px;
+}
+
+.onas .ikona {
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+.listok img.img-responsive {
+	max-width: 60%;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+#section4{
+	min-height: 100% !important;
+	height: auto !important
+}
+
+.kontakt-wrapper {
+	position: static;
+	padding-top: 0px;
+	padding-bottom: 0px
+}
+
+#section5{
+	height: auto !important
+}
+
+#section4{
+	min-height: 100% !important;
+	height: auto !important
+}
+
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+
+
+
+.left-ribbon, .right-ribbon, #gmap, .controlArrow{
+	display: none;
+}
+
+.navbar-nav>li {
+	display: block;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border: none;
+	border-color: transparent
+}
+
+.kontakt-wrapper {
+	position: static;
+	padding-top: 0px;
+	padding-bottom: 0px
+}
+
+#gmap{
+	display: none
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	padding-bottom: 15px
+}
+
+.onas .ikona {
+	padding-bottom: 20px;
+	padding-top: 40px;
+}
+
+.listok img.img-responsive {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.copyright {
+	margin-top: 25px;
+}
+
+.specialita-dna .inner-content {
+	position: static;
+	padding-bottom: 120px;
+}
+
+.specialita-dna img.img-responsive {
+	display: none
+}
+
+.blog .btn-xs {
+	float: none !important;
+}
+
+.specialita-dna {
+margin-top: 30px
+display: inline-block;
+position: relative;
+background: url(../img/jedalny-listok/chalkboard.jpg);
+background-size: cover;
+}
+
+a.specialita-dna-news {
+color: #df3759;
+font-size: 18px;
+}
+
+.mail-icon {
+margin-bottom: 9px;
+width: 28px;
+height: auto;
+}
+
+.listok{
+	margin-bottom: 40px
+}
+
+#section4{
+	min-height: 100% !important;
+	height: auto !important
+}
+
+div.fb-like.fb_iframe_widget.fb_iframe_widget_fluid{
+	width: auto !important
+}
+
+.kontakt-wrapper{
+	padding-bottom: 0px !important
+}
+
+}
+
+
+
+
+
+
+
+
+
+/* media na vysku */
+
+@media (max-height: 750px) {
+	
+
+#section3 h1 {
+display: none
+}
+	
+.kontakt-wrapper {
+	padding-bottom: 25px;
+}
+
+.hlavna-navigacia {
+	margin-top: 2%;
+}
+	
+}
