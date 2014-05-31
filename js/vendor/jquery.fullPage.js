@@ -321,7 +321,7 @@
 					section.addClass('active').siblings().removeClass('active');
 				}
 			}
-
+			
 	
 			$(window).on('load', function() {
 				scrollToAnchor();	
@@ -333,55 +333,54 @@
 		var isScrolling = false;
 		
 		//when scrolling...
-		$(window).scroll(function(e){
-
-			if(!options.autoScrolling){					
-				var currentScroll = $(window).scrollTop();
-				
-				var scrolledSections = $('.section').map(function(){
-					if ($(this).offset().top < (currentScroll + 100)){
-						return $(this);
-					}
-				});
-				
-				//geting the last one, the current one on the screen
-				var currentSection = scrolledSections[scrolledSections.length-1];
-				
-				//executing only once the first time we reach the section
-				if(!currentSection.hasClass('active')){
-					var leavingSection = $('.section.active').index('.section') + 1;
-
-					isScrolling = true;	
-					
-					var yMovement = getYmovement(currentSection);
-					
-					currentSection.addClass('active').siblings().removeClass('active');
-				
-					var anchorLink  = currentSection.data('anchor');
-					$.isFunction( options.onLeave ) && options.onLeave.call( this, leavingSection, (currentSection.index('.section') + 1), yMovement);
-
-					$.isFunction( options.afterLoad ) && options.afterLoad.call( this, anchorLink, (currentSection.index('.section') + 1));
-					
-					activateMenuElement(anchorLink);	
-					activateNavDots(anchorLink, 0);
-					
-				
-					if(options.anchors.length && !isMoving){
-						//needed to enter in hashChange event when using the menu with anchor links
-						lastScrolledDestiny = anchorLink;
-			
-						location.hash = anchorLink;
-					}
-					
-					//small timeout in order to avoid entering in hashChange event when scrolling is not finished yet
-					clearTimeout(scrollId);
-					scrollId = setTimeout(function(){					
-						isScrolling = false;
-					}, 100);
-				}
-				
-			}					
-		});	
+//		$(window).scroll(function(e){
+//			if(!options.autoScrolling){					
+//				var currentScroll = $(window).scrollTop();
+//				
+//				var scrolledSections = $('.section').map(function(){
+//					if ($(this).offset().top < (currentScroll + 100)){
+//						return $(this);
+//					}
+//				});
+//				
+//				//geting the last one, the current one on the screen
+//				var currentSection = scrolledSections[scrolledSections.length-1];
+//				
+//				//executing only once the first time we reach the section
+//				if(!currentSection.hasClass('active')){
+//					var leavingSection = $('.section.active').index('.section') + 1;
+//
+//					isScrolling = true;	
+//					
+//					var yMovement = getYmovement(currentSection);
+//					
+//					currentSection.addClass('active').siblings().removeClass('active');
+//				
+//					var anchorLink  = currentSection.data('anchor');
+//					$.isFunction( options.onLeave ) && options.onLeave.call( this, leavingSection, (currentSection.index('.section') + 1), yMovement);
+//
+//					$.isFunction( options.afterLoad ) && options.afterLoad.call( this, anchorLink, (currentSection.index('.section') + 1));
+//					
+//					activateMenuElement(anchorLink);	
+//					activateNavDots(anchorLink, 0);
+//					
+//				
+//					if(options.anchors.length && !isMoving){
+//						//needed to enter in hashChange event when using the menu with anchor links
+//						lastScrolledDestiny = anchorLink;
+//			
+//						location.hash = anchorLink;
+//					}
+//					
+//					//small timeout in order to avoid entering in hashChange event when scrolling is not finished yet
+//					clearTimeout(scrollId);
+//					scrollId = setTimeout(function(){					
+//						isScrolling = false;
+//					}, 100);
+//				}
+//				
+//			}					
+//		});	
 	
 
 		

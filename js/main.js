@@ -371,7 +371,7 @@ var styles = [
 	var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
 	map.mapTypes.set('Styled', styledMapType);
 }
-//google.maps.event.addDomListener(window, 'load', googleMapinitialize);
+google.maps.event.addDomListener(window, 'load', googleMapinitialize);
 
 
 
