@@ -1,4 +1,6 @@
+console.log("robi");
 $(document).ready(function() {
+	console.log("dorobilo");
 	$('#fullpage').fullpage({
 		verticalCentered: false,
 		anchors: ['domov', 'onas', 'jedalny-listok', 'galeria', 'nauc-sa-chefovat', 'kontakt'],
@@ -9,7 +11,8 @@ $(document).ready(function() {
 		keyboardScrolling: true,
 		slidesNavigation: true,	
 		resize: false,
-		autoScrolling: false
+		autoScrolling: false,
+		continuousVertical : true
 	});
 	hashTag = window.location.hash;
 	isHashFromBlog = isHashFromBlog(hashTag);
@@ -368,7 +371,7 @@ var styles = [
 	var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
 	map.mapTypes.set('Styled', styledMapType);
 }
-google.maps.event.addDomListener(window, 'load', googleMapinitialize);
+//google.maps.event.addDomListener(window, 'load', googleMapinitialize);
 
 
 
