@@ -7,12 +7,13 @@ $(document).ready(function() {
 		'scrollOverflow': false,
 		menu: '#menu',
 		paddingTop: '7%',
-		scrollingSpeed: 900,
+		scrollingSpeed: 1000,
 		keyboardScrolling: true,
 		slidesNavigation: true,	
 		resize: false,
 		autoScrolling: false,
-		continuousVertical : true
+		continuousVertical : true,
+		easing: 'linear'
 	});
 	hashTag = window.location.hash;
 	isHashFromBlog = isHashFromBlog(hashTag);
