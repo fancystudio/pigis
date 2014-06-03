@@ -14,7 +14,7 @@
 
 <div class="col-md-4 col-sm-4 f-box">
 <h3>Kontakt</h3>
-<img  class="pigis-logo-small" src="img/pigis-logo-small.png" alt="pigis logo"/>
+<img  class="pigis-logo-small" src="img/pigis-logo-small.png" width="66px" height="42" alt="pigis logo"/>
 <p> 
 Dolná 50, 974 01  Banská Bystrica</p>
 <p>tel. 090 00 00 000, mail: <a href="mailto:pigis@pigis.sk">pigis@pigis.sk</a></p>
