@@ -1,4 +1,8 @@
 console.log("robi");
+var mapaNacitana = false;
+if($(document).ready() && mapaNacitana){
+	console.log("done");
+}
 $(document).ready(function() {
 	console.log("dorobilo");
 	$('#fullpage').fullpage({
@@ -164,7 +168,6 @@ function isNumber(value) {
     }
     return !isNaN(value - 0);
 }
-var map;
 function googleMapinitialize() {        
 var styles = [
     {
@@ -370,8 +373,27 @@ var styles = [
 	
 	var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
 	map.mapTypes.set('Styled', styledMapType);
+	
 }
-google.maps.event.addDomListener(window, 'load', googleMapinitialize);
+//google.maps.event.addListenerOnce(map, 'idle', function(){
+//	mapaNacitana = true;
+//	
+//});
+imagesLoaded( document, function( instance ) {
+	googleMapinitialize();
+});
+//
+//google.maps.event.addDomListener(window, 'load', googleMapinitialize);
+//google.maps.event.addListenerOnce(window, 'idle', function(){
+//   console.log("nacitane");
+//});
+
+//google.maps.event.addListenerOnce(window, 'tilesloaded', function(){
+//    //this part runs when the mapobject is created and rendered
+//    google.maps.event.addListenerOnce(window, 'tilesloaded', function(){
+//    	console.log("nacitane");
+//    });
+//});
 
 
 
