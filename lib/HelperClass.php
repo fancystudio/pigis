@@ -26,10 +26,10 @@ class Helper
 		if($contentHashId == null){
 			$select = $this->db->prepare("SELECT mb.cgblog_id, mb.cgblog_title, mb.cgblog_date, mb.summary, mb.cgblog_data, mbf.value from cms_module_cgblog mb
 											left join cms_module_cgblog_fieldvals mbf on mb.cgblog_id = mbf.cgblog_id 
-											where mb.status = 'published' order by mb.cgblog_date limit ".(($currentPage-1)*3).",".((($currentPage-1)*3)+3));
+											where mb.status = 'published' order by mb.cgblog_date limit ".(($currentPage-1)*3).",3");
 			$select->execute();
 			$blogCount = 0;
-			while ($row = $select->fetch(PDO::FETCH_OBJ)){
+			while ($row = $select->fetch(PDO::FETCH_OBJ)){	
 				$pageItems[$blogCount]["id"] = $row->cgblog_id;
 				$pageItems[$blogCount]["title"] = $row->cgblog_title;
 				$pageItems[$blogCount]["date"] = date("d.m.Y h:i:s", strtotime($row->cgblog_date));
@@ -52,7 +52,7 @@ class Helper
 			$select = $this->db->prepare("SELECT mb.cgblog_id, mb.cgblog_title, mb.cgblog_date, mb.summary, mb.cgblog_data, mbf.value from cms_module_cgblog mb
 											left join cms_module_cgblog_fieldvals mbf on mb.cgblog_id = mbf.cgblog_id 
 											where mb.status = 'published' order by mb.cgblog_date
-											limit ".($blogPosition - ($blogPosition % 3)).",".(($blogPosition - ($blogPosition % 3)) + 3));
+											limit ".($blogPosition - ($blogPosition % 3)).",3");
 			$select->execute();
 			$blogCount = 0;
 			while ($row = $select->fetch(PDO::FETCH_OBJ)){

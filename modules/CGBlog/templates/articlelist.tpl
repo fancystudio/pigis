@@ -95,12 +95,11 @@ $(document).ready(function(){
   {$formend}
 </fieldset>
 {/if}
-<!-- 
 <div class="pageoptions">
-  <input type="checkbox" id="toggle_filter" value="0"><label for="toggle_filter">{$mod->Lang('toggle_filter')}</label>&nbsp;
+  <!-- <input type="checkbox" id="toggle_filter" value="0"><label for="toggle_filter">{$mod->Lang('toggle_filter')}</label>&nbsp;-->
   <a href="{$add_url}">{cgimage image='icons/system/newobject.gif' alt=$mod->Lang('addarticle')} {$mod->Lang('addarticle')}</a>
 </div>
--->
+
 {if $itemcount > 0}
 {if $pagecount > 1}
   <p>

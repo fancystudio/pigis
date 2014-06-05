@@ -1,10 +1,5 @@
-console.log("robi");
 var mapaNacitana = false;
-if($(document).ready() && mapaNacitana){
-	console.log("done");
-}
 $(document).ready(function() {
-	console.log("dorobilo");
 	$('#fullpage').fullpage({
 		verticalCentered: false,
 		anchors: ['domov', 'onas', 'jedalny-listok', 'galeria', 'nauc-sa-chefovat', 'kontakt'],
@@ -40,6 +35,7 @@ $(document).ready(function() {
 			        next: 'staršie »',
 				    prev: '« novšie'
 			    }).on("page", function(event, num){
+			    	console.log(num);
 			    	$.ajax({
 			    		type: "POST",
 			    		url: "lib/getBlogContentAjax.php",
@@ -71,8 +67,16 @@ $(document).ready(function() {
 		}
 	});
 	newsletterSend();
-	//googleMapinitialize();
+	//loadGoogleMapScript();
 });
+$.getScript("https://maps.googleapis.com/maps/api/js?v=3.exp&callback=googleMapinitialize", function () {});
+//function loadGoogleMapScript() {
+//  var script = document.createElement('script');
+//  script.type = 'text/javascript';
+//  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+//      'callback=googleMapinitialize';
+//  document.body.appendChild(script);
+//}
 function isHashFromBlog(hashTag){
 	if(hashTag != "#domov"
 		&& hashTag != "#onas"
@@ -168,7 +172,7 @@ function isNumber(value) {
     }
     return !isNaN(value - 0);
 }
-function googleMapinitialize() {        
+function googleMapinitialize() {
 var styles = [
     {
         "featureType": "water",
@@ -375,25 +379,6 @@ var styles = [
 	map.mapTypes.set('Styled', styledMapType);
 	
 }
-//google.maps.event.addListenerOnce(map, 'idle', function(){
-//	mapaNacitana = true;
-//	
-//});
-imagesLoaded( document, function( instance ) {
-	googleMapinitialize();
-});
-//
-//google.maps.event.addDomListener(window, 'load', googleMapinitialize);
-//google.maps.event.addListenerOnce(window, 'idle', function(){
-//   console.log("nacitane");
-//});
-
-//google.maps.event.addListenerOnce(window, 'tilesloaded', function(){
-//    //this part runs when the mapobject is created and rendered
-//    google.maps.event.addListenerOnce(window, 'tilesloaded', function(){
-//    	console.log("nacitane");
-//    });
-//});
 
 
 
