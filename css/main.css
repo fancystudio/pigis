@@ -255,7 +255,7 @@ background-color: white;
 	text-align: center
 }
 
-.content h1 img{
+.content h1{
 	padding-bottom: 35px;
 }
 
@@ -727,7 +727,7 @@ li.prev a, li.next a{
 }
 
 .pigis-logo-small {
-	padding-bottom: 10px;
+	marign-bottom: 10px;
 	margin-top: -10px;
 }
 

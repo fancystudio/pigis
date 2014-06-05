@@ -20,7 +20,7 @@ function smarty_function_blog($params, &$template){
 	?>
 	<div class="container blog">
 	<div class="col-md-12">
-	<h1><img src="img/titles/nauc-sa-chefovat.png" alt="nauč sa chefovať"></h1>
+	<h1><img src="img/titles/nauc-sa-chefovat.png" alt="nauč sa chefovať" width="221" height="158"></h1>
 	</div>
 	
 	<div class="blogContent">

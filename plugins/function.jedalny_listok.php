@@ -51,7 +51,7 @@ function smarty_function_jedalny_listok($params, &$template){
 	<div class="container content jedalny-listok">
 	
 	<div class="col-md-12">
-	<h1><img src="img/titles/menu.png" alt="jedálny lístok"></h1>
+	<h1><img src="img/titles/menu.png" alt="jedálny lístok" width="116" height="35"></h1>
 	</div>
 	
 	<div class="jedalny-items">
@@ -59,7 +59,7 @@ function smarty_function_jedalny_listok($params, &$template){
 	
 	<!--<a href="includes/jedalny-listok.php" class="jedalny" data-toggle="modal" data-target="#myModal">-->
 	<a href="./uploads/jedalny-listok.pdf" class="jedalny">
-	<img  class="img-responsive" src="img/jedalny-listok/jedalny-listok.png" alt="jedálny lístok"/></a>
+	<img  class="img-responsive" src="img/jedalny-listok/jedalny-listok.png" alt="jedálny lístok" width="378" height="489"/></a>
 	
 	
 	
@@ -73,9 +73,9 @@ function smarty_function_jedalny_listok($params, &$template){
 		echo $weekDayContent;
 	?>
 	<a href="includes/newsletter.php" class="specialita-dna-news" data-toggle="modal" data-target="#modlanews">
-	<img class="mail-icon" src="img/mail-icon.png"/><br>Dostávaj špecialitu dňa na tvoj e-mail!</a>
+	<img class="mail-icon" src="img/mail-icon.png" width="47" height="30"/><br>Dostávaj špecialitu dňa na tvoj e-mail!</a>
 	</div><!--inner conent-->
-	<img  class="img-responsive" src="img/jedalny-listok/chalkboard.png" alt="špecialita dňa"/></div><!--specialita-dna-->
+	<img  class="img-responsive" src="img/jedalny-listok/chalkboard.png" alt="špecialita dňa" width="584" height="590"/></div><!--specialita-dna-->
 	</div>
 	</div><!--jedalny items-->
 	

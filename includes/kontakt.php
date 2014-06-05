@@ -14,12 +14,12 @@
 
 <div class="col-md-4 col-sm-4 f-box">
 <h3>Kontakt</h3>
-<img  class="pigis-logo-small" src="img/pigis-logo-small.png" width="66px" height="42" alt="pigis logo"/>
+<img  class="pigis-logo-small" src="img/pigis-logo-small.png" width="66px" height="32" alt="pigis logo"/>
 <p> 
 Dolná 50, 974 01  Banská Bystrica</p>
 <p>tel. 090 00 00 000, mail: <a href="mailto:pigis@pigis.sk">pigis@pigis.sk</a></p>
 <div class="fb-logo">
-<a href="http://www.facebook.com/Pigis?ref=ts&fref=ts" onclick="window.open(this.href, 'OffSite').focus(); return false;"><img  class="pigis-logo-small" src="img/facebook-logo.png" alt="facebook logo"/></a>
+<a href="http://www.facebook.com/Pigis?ref=ts&fref=ts" onclick="window.open(this.href, 'OffSite').focus(); return false;"><img  class="pigis-logo-small" src="img/facebook-logo.png" alt="facebook logo" width="54" height="54"/></a>
 <div class="fb-like" data-href="https://www.facebook.com/Pigis?fref=ts" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
 </div>
 </div>
@@ -68,7 +68,7 @@ Dolná 50, 974 01  Banská Bystrica</p>
 <div class="col-md-12" style="clear:both">
 <div class="copyright">
 <p>Copyright pigis.sk © 2014 All rights reserved. Designed &amp; powered by:
-	<a href="http://www.fancystudio.sk" onclick="window.open(this.href, 'OffSite').focus(); return false;"><img src="img/fancy-logo.png"></a>
+	<a href="http://www.fancystudio.sk" onclick="window.open(this.href, 'OffSite').focus(); return false;"><img src="img/fancy-logo.png" width="81" height="16"></a>
 </p>
 </div></div>
 <div style="clear:both"></div>
