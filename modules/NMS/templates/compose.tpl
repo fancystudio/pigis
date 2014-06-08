@@ -43,10 +43,10 @@
      </div>
      {/if}
    {/foreach}
-   <div class="pageoverflow">
+   <!-- <div class="pageoverflow">
 	<p class="pagetext">{$prompt_textmessage}</p>
 	<p class="pageinput">{$textmessage}</p>
-   </div>
+   </div> -->
    <div class="pageoverflow">
 	<p class="pagetext">&nbsp;</p>
 	<p class="pageinput">{$submit}{$cancel}</p>

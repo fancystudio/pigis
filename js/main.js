@@ -349,8 +349,11 @@ var styles = [
     }
 	];
 	
-	var isDraggable = $(document).width() > 720 ? true : false; // zisti ci je mobil
-	
+	//var isDraggable = (($(document).width() > 720) ? true : false); // zisti ci je mobil
+	isDraggable = true;
+	if (navigator.userAgent.match(/iPad;.*CPU.*OS 7_\d/i)) {
+		isDraggable = false;
+	}
 	var options = {
 	scrollwheel: false,
 	navigationControl: false,
