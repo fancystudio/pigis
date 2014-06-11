@@ -1,3 +1,4 @@
+{debug}
 <style type="text/css">
 @media screen and (max-width: 1200px) {
   .grid_8 {

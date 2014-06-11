@@ -5,7 +5,8 @@ $pageItems = array();
 $help = new Helper($config);
 $pageItems = $help->getBlogDetail($_POST["blogId"]);
 $content = '<meta property="og:title" content="'.$pageItems[0]["title"].'" />';
-$content = '<meta property="og:description" content="'.$pageItems[0]["summary"].'" />';
+$content = '<meta property="og:description" content="'.strip_tags($pageItems[0]["summary"]).'" />';
+//$content = '<meta property="og:description" content="Description" />';
 $content .= '<meta property="og:url" content="http://test.pigis.sk/#nauc-sa-chefovat-'.$pageItems[0]["id"].'" />';
 $content .= '<div class="modal fade blogModalDetail" id="nauc-sa-chefovat-'.$pageItems[0]["id"].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
 

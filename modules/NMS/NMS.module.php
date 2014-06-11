@@ -1,4 +1,5 @@
 <?php
+setlocale(LC_ALL, 'sk_SK.UTF8');
 #BEGIN_LICENSE
 #-------------------------------------------------------------------------
 # Module: Newsletter Made Simple (c) 2008 by Robert Campbell 

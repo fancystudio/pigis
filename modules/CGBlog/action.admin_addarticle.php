@@ -1,4 +1,5 @@
 <?php
+setlocale(LC_ALL, 'sk_SK.UTF8');
 #BEGIN_LICENSE
 #-------------------------------------------------------------------------
 # Module: CGBlog (c) 2010-2014 by Robert Campbell
